@@ -8,7 +8,7 @@
  * @version 1.0
  */
 
-require_once get_template_directory() . '/functions/constants/constants.php';
+require_once get_template_directory() . '/constants/constants.php';
 
 
 
@@ -23,10 +23,10 @@ require_once get_template_directory() . '/functions/constants/constants.php';
 
 require_once get_template_directory() . '/functions/global/global.php';
 
-// // ACF specific common functions
-// if ( function_exists( 'get_field' ) ) {
-// 	require_once get_template_directory() . '/functions/wp-plugins/acf/global.php';
-// }
+// ACF specific common functions
+if ( function_exists( 'get_field' ) ) {
+	require_once get_template_directory() . '/functions/wp-plugins/acf/global.php';
+}
 
 // // Gravityfoms specific common functions
 // if ( class_exists( 'GFCommon' ) ) {
@@ -51,10 +51,10 @@ require_once get_template_directory() . '/functions/global/global.php';
 if ( is_admin() ) {
 	require_once get_template_directory() . '/functions/admin/admin.php';
 
-	// // ACF specific common functions
-	// if ( function_exists( 'get_field' ) ) {
-	// 	require_once get_template_directory() . '/functions/wp-plugins/acf/admin.php';
-	// }
+	// ACF specific common functions
+	if ( function_exists( 'get_field' ) ) {
+		require_once get_template_directory() . '/functions/wp-plugins/acf/admin.php';
+	}
 
 	// // Gravityfoms specific common functions
 	// if ( class_exists( 'GFCommon' ) ) {
@@ -80,10 +80,10 @@ if ( is_admin() ) {
 if ( ! is_admin() ) {
 	require_once get_template_directory() . '/functions/public/public.php';
 
-	// // ACF specific common functions
-	// if ( function_exists( 'get_field' ) ) {
-	// 	require_once get_template_directory() . '/functions/wp-plugins/acf/public.php';
-	// }
+	// ACF specific common functions
+	if ( function_exists( 'get_field' ) ) {
+		require_once get_template_directory() . '/functions/wp-plugins/acf/public.php';
+	}
 
 	// // Gravityfoms specific common functions
 	// if ( class_exists( 'GFCommon' ) ) {
