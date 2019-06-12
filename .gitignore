@@ -5,8 +5,9 @@ mix.js.map
 
 # package.json
 # package-lock.json
-# webpack.dev.js
-# webpack.mix.js
+webpack.deploy.js
+webpack.mix.backup.js
+webpack.mix.js
 
 # Dist
 /dist

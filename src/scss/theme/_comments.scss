@@ -1,0 +1,153 @@
+.c-comments {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.c-comments .comment-body {
+	display: block;
+	content: '';
+	clear: both;
+
+	img {
+		float: left;
+		width: 80px;
+		height: 80px;
+		margin: 0 20px 10px 0;
+	}
+
+	.comment-author {
+		font-family: $font-header;
+		font-size: $pixel24;
+		font-weight: 400;
+		color: $blue;
+
+		cite {
+			font-style: normal;
+		}
+	}
+
+	.comment-meta {
+		font-family: $font-header;
+		padding-bottom: 10px;
+
+		a {
+			font-size: $pixel16;
+			font-weight: 400;
+			color: $grey-dark;
+		}
+	}
+}
+
+.c-comments .children {
+	list-style-type: none;
+	margin: 25px 0;
+	padding: 0 0 0 30px;
+	border-left: 1px solid #d6d6d6;
+
+	@include media('>s') {
+		margin-left: 40px;
+	}
+
+	li {
+		padding: 20px 0 0;
+
+		&:last-child {
+			padding-bottom: 20px;
+		}
+	}
+}
+
+.c-comments .comment-reply-link {
+	font-size: $pixel14;
+	color: white;
+	background-color: $blue;
+	padding: 10px 25px;
+	border-radius: 3px;
+	transition: $transition-2;
+
+	&:hover {
+		color: white;
+		background-color: $orange;
+	}
+}
+
+.comment-form-comment,
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+	label {
+		display: block;
+		width: 100%;
+		font-weight: 700;
+		margin-bottom: 10px;
+
+		.required {
+			color: red;
+		}
+	}
+
+	input,
+	textarea {
+		font-family: $font-body;
+		font-size: $pixel16;
+		line-height: 1.5;
+		color: $black;
+		width: 100%;
+		padding: 20px 25px;
+		border: 1px solid $grey-pale;
+		background-color: $grey-white;
+
+		@include media('>s') {
+			font-size: $pixel18;
+		}
+	}
+}
+
+@include media('>s') {
+	.comment-form-author,
+	.comment-form-email,
+	.comment-form-url {
+		input {
+			width: 60%;
+		}
+	}
+}
+
+.comment-form {
+	.submit {
+		font-size: $pixel16;
+		color: white;
+		text-align: center;
+		text-transform: capitalize;
+		white-space: nowrap;
+		background-color: $blue;
+		padding: 10px 25px;
+		border-radius: 3px;
+		border: none;
+		transition: $transition-2;
+
+		&:hover {
+			color: white;
+			background-color: $orange;
+		}
+
+		@include media('>s') {
+			font-size: $pixel16;
+			padding: 15px 30px;
+		}
+	}
+}
+
+.comment-form-cookies-consent {
+	display: flex;
+	align-items: center;
+
+	input {
+		flex: 0 0 25px;
+	}
+
+	label {
+		margin-bottom: 0;
+	}
+}

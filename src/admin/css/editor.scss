@@ -1,0 +1,93 @@
+// @import url('https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed:400,700');
+@import "../../scss/styles";
+
+//
+// Editor Body Font
+// ------------------------
+
+body {
+	margin-top: 0;
+	height: auto;
+	min-height: auto;
+}
+
+//
+// Editor Block Spacing
+// ------------------------
+
+.wp-block {
+	max-width: 90%;
+}
+
+.u-block,
+.editor-post-title__block {
+	padding: $spacing-25;
+
+	@include media(">s") {
+		padding: $spacing-30;
+	}
+}
+
+//
+// Editor Page Title
+// ------------------------
+
+.editor-post-title {
+	background-color: $grey-pale;
+}
+
+.editor-post-title__block .editor-post-title__input {
+	font-family: $font-header;
+	font-weight: 500;
+	color: $black;
+}
+
+.editor-post-title__block {
+	max-width: 90%;
+	margin: 0 0 25px;
+	padding-top: $spacing-25;
+	padding-bottom: $spacing-25;
+
+	@include media(">s") {
+		padding-top: $spacing-30;
+		padding-bottom: $spacing-30;
+	}
+}
+
+//
+// Content Styles
+// ------------------------
+
+body#tinymce {
+	// font-family: $font-body;
+	font-size: 16px;
+	line-height: 1.6;
+	margin: 15px 30px;
+	vertical-align: baseline;
+
+	table {
+		width: 100%;
+	}
+}
+
+//
+// Editor Toolbar
+// ------------------------
+
+.editor-block-toolbar > .components-toolbar {
+	display: none;
+}
+
+//
+// ACF Specific Fixes
+// ------------------------
+
+.acf-table {
+	display: table;
+}
+
+.acf-input ol,
+.acf-input ul {
+	padding: 0 !important;
+	margin: 0 !important;
+}

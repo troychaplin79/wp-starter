@@ -1,0 +1,269 @@
+/**
+ * Defaults Styles
+ * =============
+ */
+
+// * {
+// 	margin: 0;
+// 	padding: 0;
+// }
+
+// HTML / Body
+// -----------------------------
+
+/*
+html,
+body {
+	width: 100%;
+	min-height: 100%;
+	height: 100%;
+	-webkit-text-size-adjust: none;
+	border-radius: 10px; // stops ios safari from growing text
+}
+
+html {
+	scroll-behavior: smooth; // you've been hit by a... smooth criminal
+}
+*/
+
+body {
+	color: $grey-dark;
+	font-family: $font-body;
+	margin-top: $nav-height;
+	// 	margin: 0;
+	// 	font-style: normal;
+}
+
+/*
+main {
+	display: block;
+}
+*/
+
+// Links / Buttons
+// -----------------------------
+
+a {
+	color: red;
+	text-decoration: none;
+	font-weight: 500;
+	// outline: none;
+	// cursor: pointer;
+
+	&:hover {
+		// text-decoration: underline;
+		// border-bottom: 1px solid;
+	}
+
+	&:focus {
+		outline: 0 none;
+	}
+}
+
+button {
+	cursor: pointer;
+
+	&:not(:last-child) {
+		margin-bottom: $spacing-25;
+	}
+}
+
+/*
+a:focus,
+button:focus,
+button:hover,
+input[type='submit']:focus,
+input[type='submit']:hover {
+	text-decoration: none;
+}
+
+a[href^='tel:'] {
+	color: teal;
+	font-weight: 500;
+
+	@include media('>=s') {
+		background: none;
+	}
+	@include media('>s') {
+		color: $orange;
+		font-weight: 400;
+	}
+}
+*/
+
+// Headings
+// -----------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-header;
+	// font-weight: 500;
+	line-height: 1.2;
+
+	&:not(:last-child) {
+		margin-bottom: $spacing-25;
+	}
+}
+
+h1 {
+	font-size: $pixel28;
+
+	@include media('>s') {
+		font-size: $pixel32;
+	}
+}
+
+h2 {
+	font-size: $pixel24;
+
+	@include media('>s') {
+		font-size: $pixel28;
+	}
+}
+
+h3,
+h4,
+h5,
+h6 {
+	font-size: $pixel24;
+}
+
+// Content Styles
+// -----------------------------
+
+p,
+ul,
+ol {
+	font-size: $pixel16;
+	line-height: 1.5;
+	color: $grey-dark;
+
+	&:not(:last-child) {
+		margin-bottom: $spacing-25;
+	}
+
+	@include media('>s') {
+		font-size: $pixel18;
+	}
+}
+
+ul,
+ol {
+	list-style-type: disc;
+	padding-left: $spacing-25;
+	margin-left: $spacing-25;
+
+	li:not(:last-child) {
+		padding-bottom: 5px;
+	}
+
+	ul,
+	ol {
+		margin-top: 10px;
+		margin-bottom: 5px;
+	}
+}
+
+ol {
+	list-style-type: decimal;
+
+	ol {
+		list-style-type: lower-alpha;
+	}
+}
+
+/*
+blockquote {
+	font-weight: 300;
+	font-style: italic;
+	border-left: 4px solid teal;
+	margin: 0;
+	padding: $grid-gutter $grid-gutter * 2;
+
+	&:not(:last-child) {
+		margin-bottom: $spacing-25;
+	}
+}
+
+// img {
+// 	max-width: 100%;
+// 	height: auto;
+// }
+*/
+
+hr {
+	margin-bottom: $spacing-25;
+	border: none;
+	background-color: $grey-pale;
+	height: 1px;
+}
+
+img,
+figure {
+	display: block;
+}
+
+video {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+/*
+address {
+	font-style: normal;
+	font-size: $pixel16;
+	line-height: 1.5;
+
+	&:not(:last-child) {
+		margin-bottom: $spacing-25;
+	}
+}
+*/
+
+// Tables
+// -----------------------------
+
+/*
+table {
+	width: 100%;
+	font-size: $pixel14;
+	margin-bottom: $spacing-25;
+	border-collapse: collapse;
+	border-spacing: 0;
+	white-space: nowrap;
+	display: block; // used to force responsive
+	max-width: min-content; // used to force responsive
+	overflow-x: auto; // used to force responsive
+
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	ul,
+	ol {
+		font-size: $pixel14;
+	}
+}
+
+table tr {
+	border-bottom: 1px solid $grey;
+}
+
+table thead tr td,
+table tr td {
+	padding: $spacing-25;
+	vertical-align: top;
+}
+
+table thead tr {
+	background-color: $grey-dark;
+	color: white;
+	border: none;
+}
+*/

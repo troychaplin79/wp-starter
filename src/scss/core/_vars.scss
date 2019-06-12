@@ -1,0 +1,91 @@
+/**
+ * Theme Specific Vars
+ * =============
+ // Add new vars, or override vars from /shared/scss/core/_vars.scss
+ */
+
+/**
+ * Media Query Breakpoints
+ * =============
+ */
+
+$breakpoints: (
+	s: 800px,
+	l: 1060px,
+);
+
+/**
+ * Grid Vars
+ * =============
+ */
+
+$grid-gutter: 50px !default;
+
+/**
+ * Spacing
+ * =============
+ */
+
+$spacing-25: 25px !default;
+$spacing-30: 30px !default;
+$spacing-40: 40px !default;
+$spacing-50: 50px !default;
+$spacing-60: 60px !default;
+
+/**
+ * Fonts
+ * ============
+ */
+
+$font-body: 'Roboto', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto',
+	'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+	'Segoe UI Symbol';
+
+$font-header: 'Roboto Condensed', -apple-system, 'BlinkMacSystemFont',
+	'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji',
+	'Segoe UI Emoji', 'Segoe UI Symbol';
+
+/**
+ * Colors
+ * =============
+ */
+
+$grey-white: #f3f3f3;
+$grey-pale: #e6e6e6;
+$grey-light: #8f8f8f;
+$grey-medium: #6f6f6f;
+$grey-dark: #555555;
+$black: #1f1f1f;
+
+$blue: #2e7f99;
+$orange: #cd4c1a;
+
+/**
+ * Font Sizes
+ * =============
+ */
+
+$pixel14: 14px;
+$pixel16: 16px;
+$pixel18: 18px;
+$pixel24: 24px;
+$pixel28: 28px;
+$pixel32: 32px;
+$pixel42: 42px;
+$pixel48: 48px;
+$pixel62: 62px;
+
+/**
+ * Transitions
+ * ============
+ */
+
+$transition-2: all 0.2s ease-out;
+$transition-5: all 0.5s ease-out;
+
+/**
+ * Theme Globals
+ * =============
+ */
+
+$nav-height: 50px;

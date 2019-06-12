@@ -1,0 +1,18 @@
+/**
+ * Admin Area
+ */
+
+//
+// Editing Area
+// ------------------------
+
+// Modify the options found under the vertical 3 dot icons in top right corner
+.components-menu-group {
+	&:not(:first-of-type) {
+		display: none;
+	}
+
+	button:first-of-type {
+		display: none;
+	}
+}
