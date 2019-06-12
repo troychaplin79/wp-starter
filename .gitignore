@@ -1,0 +1,19 @@
+# Core Config
+.env
+mix-manifest.json
+mix.js.map
+
+# package.json
+# package-lock.json
+# webpack.dev.js
+# webpack.mix.js
+
+# Dist
+/dist
+/release
+
+# Folders
+/node_modules
+
+# System
+.DS_Store
