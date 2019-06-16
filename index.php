@@ -1,4 +1,4 @@
 <?php
-// silence is golden
-
+get_header();
 echo 'Starter theme';
+get_footer();

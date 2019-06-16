@@ -18,3 +18,4 @@ webpack.mix.js
 
 # System
 .DS_Store
+.vscode/*

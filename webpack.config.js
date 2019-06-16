@@ -5,8 +5,8 @@
 // Webpack Dependencies
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 // Build Config
 module.exports = {
@@ -36,7 +36,7 @@ module.exports = {
 	},
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: '../css/[name].css'
+			filename: '../css/styles.css'
 		})
 	],
 	optimization: {
