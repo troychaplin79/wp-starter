@@ -1,7 +1,7 @@
 // Include jQuwery in project
 // -------------------------
 
-window.$ = window.jQuery = require('jquery');
+// window.$ = window.jQuery = require('jquery');
 
 // Check for jQuery
 window.onload = function() {
@@ -12,9 +12,4 @@ window.onload = function() {
 	}
 };
 
-// import '@babel/polyfill';
-
-// import SomeFunction from './modules/jsFunction';
-// SomeFunction('.u-function');
-
-// import './modules/Polyfill-forEach';
+console.log('welcome to webpack');
