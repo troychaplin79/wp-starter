@@ -1,3 +1,8 @@
+// Global Styles
+// -------------------------
+
+import '../scss/styles.scss';
+
 // Include jQuwery in project
 // -------------------------
 
