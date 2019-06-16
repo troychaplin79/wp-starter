@@ -1,9 +1,14 @@
-// Global Styles
+// Import main stylesheet
 // -------------------------
 
 import '../scss/styles.scss';
 
-// Include jQuwery in project
+// ES6 support via polyfills
+// -------------------------
+
+import "@babel/polyfill";
+
+// Include jQuery in project
 // -------------------------
 
 // window.$ = window.jQuery = require('jquery');
@@ -16,5 +21,8 @@ window.onload = function() {
 		console.log('jQuery is not available');
 	}
 };
+
+// Testing that things are working
+// -------------------------
 
 console.log('welcome to webpack');
