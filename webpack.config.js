@@ -4,6 +4,7 @@
 
 // Webpack Dependencies
 const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
@@ -15,7 +16,7 @@ module.exports = {
 	},
 	'output': {
 		filename: '[name].js',
-		path: path.join(__dirname, 'dist/js/')
+		path: path.join(__dirname, 'dist/')
 	},
 	module: {
 		rules: [
@@ -35,8 +36,9 @@ module.exports = {
 		]
 	},
 	plugins: [
+		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
-			filename: '../css/styles.css'
+			filename: './styles.css'
 		})
 	],
 	optimization: {
