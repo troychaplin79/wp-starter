@@ -5,8 +5,8 @@
 // Webpack Dependencies
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const globImporter = require('node-sass-glob-importer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 // Build Config
@@ -34,8 +34,25 @@ module.exports = {
 				test: /\.scss$/,
 				use: [
 					MiniCssExtractPlugin.loader,
-					'css-loader',
-					'sass-loader'
+					{
+						loader: 'css-loader',
+						options: {
+							sourceMap: true,
+						},
+					},
+					{
+						loader: 'postcss-loader',
+						options: {
+							sourceMap: true,
+						},
+					},
+					{
+						loader: 'sass-loader',
+						options: {
+							sourceMap: true,
+							importer: globImporter(),
+						},
+					},
 				]
 			}
 		]
@@ -44,7 +61,7 @@ module.exports = {
 		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
 			filename: './styles.css'
-		})
+		}),
 	],
 	optimization: {
 		minimizer: [
@@ -52,8 +69,7 @@ module.exports = {
 				cache: true,
 				parallel: true,
 				sourceMap: true
-			}),
-			new OptimizeCssAssetsPlugin({})
+			})
 		]
 	}
 };
