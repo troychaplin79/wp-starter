@@ -1,4 +1,4 @@
 <?php
 get_header();
-echo 'Starter theme';
+echo '<p>Starter theme</p>';
 get_footer();

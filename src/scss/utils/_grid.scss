@@ -7,7 +7,7 @@
 	display: grid;
 	grid-gap: $spacing-30;
 
-	@include media('>s') {
+	@include media(">s") {
 		grid-gap: $grid-gutter;
 	}
 }
@@ -23,7 +23,7 @@
 .u-grid--3 {
 	grid-template-columns: repeat(2, 1fr);
 
-	@include media('>s') {
+	@include media(">s") {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
@@ -31,7 +31,7 @@
 .u-grid--4 {
 	grid-template-columns: repeat(2, 1fr);
 
-	@include media('>s') {
+	@include media(">s") {
 		grid-template-columns: repeat(4, 1fr);
 	}
 }
@@ -40,7 +40,17 @@
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 5px;
 
-	@include media('>s') {
+	@include media(">s") {
+		grid-template-columns: repeat(5, 1fr);
+		grid-gap: 5px;
+	}
+}
+
+.u-grid--5 {
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 5px;
+
+	@include media(">s") {
 		grid-template-columns: repeat(5, 1fr);
 		grid-gap: 5px;
 	}
@@ -51,7 +61,7 @@
  * =============
  */
 
-@include media('<=s') {
+@include media("<=s") {
 	.u-grid--s1 {
 		grid-template-columns: repeat(1, 1fr);
 	}
@@ -83,7 +93,7 @@
 			margin-bottom: $spacing-30;
 			// grid-gap: $spacing-30;
 
-			@include media('>s') {
+			@include media(">s") {
 				margin-bottom: $grid-gutter;
 				// grid-gap: $grid-gutter;
 			}

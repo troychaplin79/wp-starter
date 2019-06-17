@@ -1,5 +1,6 @@
 module.exports = {
 	plugins: [
+		// TODO: why doesn't this work inside cssnano preset
 		require('autoprefixer')({
 			flexbox: false,
 			grid: false,
@@ -7,23 +8,19 @@ module.exports = {
 		require('css-mqpacker')({
 			sort: true,
 		}),
-		require('css-declaration-sorter')({
-			order: 'concentric-css',
-		}),
-		require('pixrem')({
+		require('postcss-pxtorem')({
 			replace: true,
 		}),
-		// require('cssnano')({
-		// 	zindex: false,
-
-		// 	preset: [
-		// 		'default',
-		// 		{
-		// 			discardComments: {
-		// 				removeAll: true,
-		// 			},
-		// 		},
-		// 	],
-		// }),
+		require('cssnano')({
+			preset: ['advanced', {
+				cssDeclarationSorter: {
+					order: 'concentric-css',
+				},
+				discardComments: {
+					removeAll: true,
+				},
+			}]
+			// zindex: false,
+		}),
 	],
 };
