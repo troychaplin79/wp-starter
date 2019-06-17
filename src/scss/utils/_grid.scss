@@ -46,16 +46,6 @@
 	}
 }
 
-.u-grid--5 {
-	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 5px;
-
-	@include media(">s") {
-		grid-template-columns: repeat(5, 1fr);
-		grid-gap: 5px;
-	}
-}
-
 /**
  * CSS Grid Modifiers
  * =============
