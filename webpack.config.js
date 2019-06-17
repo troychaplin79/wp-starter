@@ -79,7 +79,7 @@ module.exports = {
 			algorithm: 'gzip',
 		}),
 		new MiniCssExtractPlugin({
-			filename: 'css/[name].css',
+			filename: 'css/styles.css',
 		}),
 		new BrowserSyncPlugin({
 			host: 'localhost',
