@@ -6,6 +6,7 @@
 const path = require('path');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const compression = require('compression-webpack-plugin');
 const globImporter = require('node-sass-glob-importer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
@@ -16,7 +17,7 @@ module.exports = {
 		'scripts': './src/js/index.js'
 	},
 	'output': {
-		filename: '[name].js',
+		filename: 'js/[name].js',
 		path: path.resolve(__dirname, 'dist')
 	},
 	module: {
@@ -72,8 +73,13 @@ module.exports = {
 	},
 	plugins: [
 		new CleanWebpackPlugin(),
+		new compression({
+			test: /\.(js|css|map)(\?.*)?$/i,
+			filename: '[path].gz[query]',
+			algorithm: 'gzip',
+		}),
 		new MiniCssExtractPlugin({
-			filename: './styles.css'
+			filename: 'css/[name].css',
 		}),
 		new BrowserSyncPlugin({
 			host: 'localhost',

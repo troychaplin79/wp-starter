@@ -21,8 +21,8 @@ function wpbase_front_end_enqueues()
     wp_enqueue_style('googlefonts', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,700', false, THEME_VERSION);
 
     // Theme Scripts and Styles
-    wp_enqueue_style('styles', get_template_directory_uri() . '/dist/styles.css', false, THEME_VERSION, 'screen');
-    wp_enqueue_script('scripts', get_template_directory_uri() . '/dist/scripts.js', null, THEME_VERSION, true);
+    wp_enqueue_style('styles', get_template_directory_uri() . '/dist/css/styles.css', false, THEME_VERSION, 'screen');
+    wp_enqueue_script('scripts', get_template_directory_uri() . '/dist/js/scripts.js', null, THEME_VERSION, true);
 }
 add_action('wp_enqueue_scripts', 'wpbase_front_end_enqueues');
 
