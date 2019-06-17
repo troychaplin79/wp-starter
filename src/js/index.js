@@ -6,7 +6,7 @@ import '../scss/styles.scss';
 // ES6 support via polyfills
 // -------------------------
 
-import "@babel/polyfill";
+// import "@babel/polyfill";
 
 // Include jQuery in project
 // -------------------------
