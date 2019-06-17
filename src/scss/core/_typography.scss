@@ -112,7 +112,7 @@ h6 {
 h1 {
 	font-size: $pixel28;
 
-	@include media('>s') {
+	@include media(">s") {
 		font-size: $pixel32;
 	}
 }
@@ -120,7 +120,7 @@ h1 {
 h2 {
 	font-size: $pixel24;
 
-	@include media('>s') {
+	@include media(">s") {
 		font-size: $pixel28;
 	}
 }
@@ -146,7 +146,7 @@ ol {
 		margin-bottom: $spacing-25;
 	}
 
-	@include media('>s') {
+	@include media(">s") {
 		font-size: $pixel18;
 	}
 }

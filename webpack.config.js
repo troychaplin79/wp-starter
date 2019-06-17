@@ -4,6 +4,7 @@
 
 // Webpack Dependencies
 const path = require('path');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const globImporter = require('node-sass-glob-importer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -74,6 +75,15 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: './styles.css'
 		}),
+		new BrowserSyncPlugin({
+			host: 'localhost',
+			port: 3000,
+			proxy: 'https://local.wpbase.ca',
+			files: [
+				'*.php',
+				'dist/*',
+			],
+		})
 	],
 	optimization: {
 		minimizer: [

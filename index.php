@@ -1,4 +1,4 @@
 <?php
 get_header();
-echo '<p>Starter theme</p>';
+echo '<p>WordPress Starter Theme</p>';
 get_footer();
