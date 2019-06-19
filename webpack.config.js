@@ -80,6 +80,7 @@ module.exports = {
 		}),
 		new MiniCssExtractPlugin({
 			filename: 'css/styles.css',
+			// filename: "css/[name].css",
 		}),
 		new BrowserSyncPlugin({
 			host: 'localhost',
