@@ -1,6 +1,6 @@
 <?php
 /**
- * Add Editor Stylesheet
+ * Add editor stylesheet
 
  * @package Theme Admin Supports
  * @category Admin Enqueues

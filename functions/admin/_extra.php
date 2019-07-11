@@ -1,12 +1,11 @@
 <?php
 /**
  * Reorder the admin menu
- * =============
- * @package Theme Functions
- * @category Dashboard Functions
+
+ * @package Theme Admin Supports
+ * @category Dashboard Modifications
  * @version 1.0
  */
-
 function wpstarter_menu_order() {
 	return array(
 		'index.php',
