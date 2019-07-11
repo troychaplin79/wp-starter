@@ -25,6 +25,15 @@ function wpstarter_admin_enqueue() {
 add_action( 'admin_enqueue_scripts', 'wpstarter_admin_enqueue' );
 
 /**
+ * Set default posts per page
+ *
+ * @package Theme Admin Supports
+ * @category Update Options
+ * @version 1.0
+ */
+update_option( 'posts_per_page', 12 );
+
+/**
  * Set default media sizes
  *
  * @package Theme Admin Supports
@@ -37,12 +46,3 @@ update_option( 'medium_size_w', 400 );
 update_option( 'medium_size_h', 0 );
 update_option( 'large_size_w', 1024 );
 update_option( 'large_size_h', 0 );
-
-/**
- * Set default posts per page
- *
- * @package Theme Admin Supports
- * @category Update Options
- * @version 1.0
- */
-update_option( 'posts_per_page', 12 );
