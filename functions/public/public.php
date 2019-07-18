@@ -23,13 +23,13 @@ function wpbase_front_end_enqueues() {
 	// wp_enqueue_style( 'googlefonts', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,700', false, THEME_VERSION );
 
 	// Enqueued Resource Path
-	$theme_stylesheet_path = get_template_directory_uri() . '/dist/css/styles.css';
-	$theme_javascript_path = get_template_directory_uri() . '/dist/js/scripts.js';
+	$theme_stylesheet_path = get_template_directory_uri() . '/dist/css/styles.css.gz';
+	$theme_javascript_path = get_template_directory_uri() . '/dist/js/scripts.js.gz';
 
 	// Change Paths for Local Development
-	if ( 'dev' === getenv( 'ENV_CURRENT_ENV' ) ) {
-		$theme_stylesheet_path = get_template_directory_uri() . '/dist/css/styles.css&id=' . wp_rand();
-		$theme_javascript_path = get_template_directory_uri() . '/dist/js/scripts.js&id=' . wp_rand();
+	if ( 'DEV' === getenv( 'ENV_SERVER_ENV' ) ) {
+		$theme_stylesheet_path = get_template_directory_uri() . '/dist/css/styles.css';
+		$theme_javascript_path = get_template_directory_uri() . '/dist/js/scripts.js';
 	}
 
 	// Theme Scripts and Styles
