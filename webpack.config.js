@@ -86,7 +86,15 @@ module.exports = {
 			host: "localhost",
 			port: 3000,
 			proxy: "https://local.multitenant.ca",
-			files: ["*.php", "dist/*"]
+			files: [
+				"*.php",
+				"acf-json/**/*",
+				"blocks/**/*",
+				"components/**/*",
+				"dist/**/*",
+				"functions/**/*",
+				"templates/**/*"
+			]
 		})
 	],
 	optimization: {

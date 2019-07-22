@@ -10,8 +10,8 @@
  */
 
 $breakpoints: (
-	s: 800px,
-	l: 1060px,
+	s: 860px,
+	l: 1150px
 );
 
 /**
@@ -19,7 +19,7 @@ $breakpoints: (
  * =============
  */
 
-$grid-gutter: 50px !default;
+$grid-gutter: 25px !default;
 
 /**
  * Spacing
@@ -37,13 +37,13 @@ $spacing-60: 60px !default;
  * ============
  */
 
-$font-body: 'Roboto', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto',
-	'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-	'Segoe UI Symbol';
+$font-body: "Roboto", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto",
+	"Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+	"Segoe UI Symbol";
 
-$font-header: 'Roboto Condensed', -apple-system, 'BlinkMacSystemFont',
-	'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji',
-	'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-header: "Roboto Condensed", -apple-system, "BlinkMacSystemFont",
+	"Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji",
+	"Segoe UI Emoji", "Segoe UI Symbol";
 
 /**
  * Colors
@@ -88,4 +88,4 @@ $transition-5: all 0.5s ease-out;
  * =============
  */
 
-$nav-height: 50px;
+$nav-height: 0;
