@@ -34,8 +34,8 @@ require_once get_template_directory() . '/functions/global/global.php';
  * @package Admin Functions
  * @version 1.0
  */
-if ( is_admin() ) {
-	include_once get_template_directory() . '/functions/admin/admin.php';
+if (is_admin()) {
+    include_once get_template_directory() . '/functions/admin/admin.php';
 }
 
 /**
@@ -46,8 +46,8 @@ if ( is_admin() ) {
  * @version 1.0
  */
 
-if ( ! is_admin() ) {
-	include_once get_template_directory() . '/functions/public/public.php';
+if (! is_admin()) {
+    include_once get_template_directory() . '/functions/public/public.php';
 }
 
 /**

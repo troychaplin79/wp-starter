@@ -9,4 +9,4 @@
  * @author troychaplin
  */
 
-define( 'THEME_VERSION', '0.0.1' );
+define('THEME_VERSION', '0.0.1');
