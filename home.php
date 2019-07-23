@@ -19,11 +19,8 @@ if ('DEV' === getenv('ENV_SERVER_ENV')) {
     echo '<div class="u-block u-block--white"><div>';
         echo '<h2>Page Information</h2>';
         echo '<ul>';
-        echo '<li>Current post id is <strong>' . $current_id . '</strong>, current post type is <strong>' . $get_post_type . '</strong></li>';
-        echo '<li><strong>Core file being loaded:</strong> ' . dirname(__FILE__) . '/home.php</li>';
-    if (! empty($template_name)) {
-        echo '<li><strong>Additional file being included:</strong> ' . dirname(__FILE__) . '/' . $template_name . '.php</li>';
-    }
+        echo '<li>Current post id is ' . $current_id . ', current post type is ' . $get_post_type . '</li>';
+        echo '<li>Core file being loaded: ' . dirname(__FILE__) . '/home.php</li>';
         echo '</ul>';
     echo '</div></div>';
 }
