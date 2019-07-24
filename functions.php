@@ -51,23 +51,12 @@ if (! is_admin()) {
 }
 
 /**
- * Examples on conditionally loading based on commonly used plugins
+ * Include dev only functions
  *
  * @since   Resource Includes
- * @package Plugin Functions
+ * @package Dev Functions
  * @version 1.0
  */
-// // ACF specific common functions
-// if (function_exists('get_field') ) {
-//     include_once get_template_directory() . '/functions/wp-plugins/acf/global.php';
-// }
-
-// // Gravityfoms specific common functions
-// if (class_exists('GFCommon') ) {
-//     include_once get_template_directory() . '/functions/wp-plugins/gravityforms/global.php';
-// }
-
-// // WordPress SEO specific common functions
-// if (defined('WPSEO_VERSION') ) {
-//     include_once get_template_directory() . '/functions/wp-plugins/wordpress-seo/global.php';
-// }
+if ('DEV' === getenv('ENV_SERVER_ENV')) {
+    include_once get_template_directory() . '/functions/dev/dev.php';
+}
