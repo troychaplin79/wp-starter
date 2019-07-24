@@ -11,7 +11,12 @@ if (have_posts()) :
 
         require_once get_template_directory() . '/header.php';
         require_once get_template_directory() . '/blocks/banner/' . $template_name . '.php';
-        require_once get_template_directory() . '/templates/single/' . $template_name . '.php';
+        
+        // Create main element and get the page content
+        echo '<main>';
+            the_content();
+        echo '</main>';
+
         require_once get_template_directory() . '/footer.php';
     endwhile;
 endif;
