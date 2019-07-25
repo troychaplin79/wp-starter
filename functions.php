@@ -1,12 +1,13 @@
 <?php
 /**
- * Include constants
+ * Theme Constants
  *
- * @since   Resource Includes
- * @package Constants
+ * @package Theme Includes
+ * @category Constants
  * @version 1.0
  */
-require_once get_template_directory() . '/constants/constants.php';
+
+define('THEME_VERSION', '0.0.1');
 
 /**
  * Include global functions

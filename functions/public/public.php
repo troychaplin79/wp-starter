@@ -1,4 +1,4 @@
-<?php
+<?php // @codingStandardsIgnoreLine
 /**
  * Enqueue Front End Style and Scripts
  * =============
@@ -10,7 +10,6 @@
 
 function wpbase_front_end_enqueues()
 {
-
     // Remove jQuery on Front End
     if (! is_admin()) {
         wp_deregister_script('jquery');
@@ -48,7 +47,6 @@ add_action('wp_enqueue_scripts', 'wpbase_front_end_enqueues');
  * @category Scripts and Styles
  * @version  1.0
  */
-
 function wpbase_enqueue_comments_reply()
 {
     if (get_option('thread_comments')) {

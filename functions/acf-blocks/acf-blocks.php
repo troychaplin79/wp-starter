@@ -1,8 +1,8 @@
-<?php
+<?php // @codingStandardsIgnoreLine
 /**
  * Add custom block categories
 
- * @package Theme Global Supports
+ * @package Theme ACF Supports
  * @category ACF + Gutenberg
  * @version 1.0
  */
@@ -24,7 +24,7 @@ add_filter('block_categories', 'acf_blocks_categories', 10, 2);
 /**
  * Disable all default gutenberg blocks
  *
- * @package Theme Functions
+ * @package Theme ACF Supports
  * @category ACF + Gutenberg
  * @version 1.0
  * @see other uses for this function: https://rudrastyh.com/gutenberg/remove-default-blocks.html
@@ -32,7 +32,6 @@ add_filter('block_categories', 'acf_blocks_categories', 10, 2);
  */
 function acf_blocks_allowed_types($allowed_blocks, $post)
 {
-
     // add all custom acf blocks here, restrict to post types in register_custom_acf_blocks functions
     $allowed_blocks = array(
         'acf/text-content',
@@ -46,14 +45,13 @@ add_filter('allowed_block_types', 'acf_blocks_allowed_types', 10, 2);
 /**
  * Register the Blocks
  *
- * @package Theme Functions
+ * @package Theme ACF Supports
  * @category ACF + Gutenberg
  * @version 1.0
  * @see https://www.advancedcustomfields.com/resources/acf_register_block/
  */
 function register_custom_acf_blocks()
 {
-
     // check function exists
     if (function_exists('acf_register_block')) {
         // Register a text content block
@@ -78,7 +76,7 @@ add_action('acf/init', 'register_custom_acf_blocks');
 /**
  * Disable gutenberg front end styles
  *
- * @package Theme Functions
+ * @package Theme ACF Supports
  * @category ACF + Gutenberg
  * @version 1.0
  */

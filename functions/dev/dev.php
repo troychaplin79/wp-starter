@@ -1,7 +1,6 @@
-<?php
+<?php // @codingStandardsIgnoreLine
 function get_page_info()
 {
-
     global $current_id, $get_post_type, $template_name, $current_tax_name, $current_term_slug;
 
     $meta = '<div class="u-block u-block--white"><div>';

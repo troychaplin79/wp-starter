@@ -1,4 +1,11 @@
 <?php
+/**
+ * WordPress Taxonomy Template
+ *
+ * @package Theme Templates
+ * @category Core Template
+ * @version 1.0
+ */
 // Get taxonomy meta
 $get_queried_object = get_queried_object();
 $current_tax_name   = $get_queried_object->taxonomy;
