@@ -2,9 +2,9 @@
 /**
  * WordPress Search Template
  *
- * @package Theme Templates
  * @category Core Template
  * @version 1.0
+ * @see https://codex.wordpress.org/Creating_a_Search_Page
  */
 require_once get_template_directory() . '/header.php';
 require_once get_template_directory() . '/blocks/banner/search.php';

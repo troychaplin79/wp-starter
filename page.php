@@ -2,9 +2,9 @@
 /**
  * WordPress Page Template
  *
- * @package Theme Templates
  * @category Core Template
  * @version 1.0
+ * @see https://developer.wordpress.org/themes/template-files-section/page-template-files/
  */
 if (have_posts()) :
     while (have_posts()) :
