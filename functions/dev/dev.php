@@ -27,7 +27,7 @@ function get_page_info()
         $meta .= '<li>Core file loaded: ' . $current_theme_dir . '/page.php</li>';
     }
 
-    if (is_singular()) {
+    if (is_singular() && ! is_page()) {
         $meta .= '<li>Included template: ' . $current_theme_dir . '/templates/single/' . $template_name . '.php</li>';
     }
 
