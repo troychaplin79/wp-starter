@@ -9,7 +9,7 @@ function get_page_info()
     $get_current_theme     = wp_get_theme();
     $current_theme_name    = $get_current_theme->get('Name');
     $current_theme_version = $get_current_theme->get('Version');
-    $current_theme_dir  = $get_current_theme->template;
+    $current_theme_dir     = $get_current_theme->template;
 
     $meta .= '<h3>Theme Meta</h3>';
     $meta .= '<ul>';
