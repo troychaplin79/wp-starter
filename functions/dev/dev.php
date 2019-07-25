@@ -24,7 +24,7 @@ function get_page_info()
     if (is_home() || is_page() || is_singular()) {
         $meta .= '<li>Current ID: ' . $current_id . '</li>';
         $meta .= '<li>Active post type: ' . $get_post_type . '</li>';
-        $meta .= '<li>Core file loaded: ' . $current_theme_dir . '/home.php</li>';
+        $meta .= '<li>Core file loaded: ' . $current_theme_dir . '/page.php</li>';
     }
 
     if (is_singular()) {
