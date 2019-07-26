@@ -76,7 +76,7 @@ module.exports = {
 	plugins: [
 		new CleanWebpackPlugin({
 			cleanOnceBeforeBuildPatterns: [resolve("dist/**/*")],
-			// cleanAfterEveryBuildPatterns: [resolve("release")],
+			// cleanAfterEveryBuildPatterns: [resolve("release/**/*")],
 			verbose: true
 		}),
 		new CompressionPlugin({
@@ -100,6 +100,7 @@ module.exports = {
 		new SshWebpackPlugin({
 			port: process.env.SSH_PORT,
 			username: process.env.SSH_USER,
+			// password: process.env.SSH_PASS,
 			privateKey: require("fs").readFileSync(process.env.SSH_KEY),
 			from: "./release",
 			host: process.env.DEV_HOST,
