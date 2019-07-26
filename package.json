@@ -11,7 +11,7 @@
 	],
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"watch": "webpack --mode=development --config webpack.config.js --watch --colors",
+		"watch": "webpack --mode=development --config webpack.build.js --watch --colors",
 		"dev": "webpack --mode=development --env=dev --config webpack.config.js ; rm -rf ./release",
 		"stage": "webpack --mode=production --env=stage --config webpack.config.js ; rm -rf ./release",
 		"prod": "webpack --mode=production --env=prod --config webpack.config.js ; rm -rf ./release"
