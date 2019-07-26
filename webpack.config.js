@@ -6,8 +6,8 @@ const path = require("path");
 const { resolve } = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
-const compression = require("compression-webpack-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
+const copyWebpackPlugin = require("copy-webpack-plugin");
 const globImporter = require("node-sass-glob-importer");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
@@ -78,7 +78,7 @@ module.exports = {
 			cleanAfterEveryBuildPatterns: [resolve("release")],
 			verbose: true
 		}),
-		new compression({
+		new CompressionPlugin({
 			test: /\.(js|css|map)(\?.*)?$/i,
 			filename: "[path].gz[query]",
 			algorithm: "gzip"
@@ -86,7 +86,7 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: "css/styles.css"
 		}),
-		new CopyPlugin([
+		new copyWebpackPlugin([
 			{ from: "./*.php", to: "../release" },
 			{ from: "./acf-json", to: "../release/acf-json" },
 			{ from: "./blocks", to: "../release/blocks" },
