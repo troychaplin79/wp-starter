@@ -10,6 +10,7 @@ const CompressionPlugin = require("compression-webpack-plugin");
 const copyWebpackPlugin = require("copy-webpack-plugin");
 const globImporter = require("node-sass-glob-importer");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const SshWebpackPlugin = require("ssh-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 // Build Config
@@ -74,8 +75,8 @@ module.exports = {
 	},
 	plugins: [
 		new CleanWebpackPlugin({
-			cleanOnceBeforeBuildPatterns: [resolve("dist")],
-			cleanAfterEveryBuildPatterns: [resolve("release")],
+			cleanOnceBeforeBuildPatterns: [resolve("dist/**/*")],
+			// cleanAfterEveryBuildPatterns: [resolve("release")],
 			verbose: true
 		}),
 		new CompressionPlugin({
@@ -96,6 +97,15 @@ module.exports = {
 			{ from: "./templates", to: "../release/templates" },
 			{ from: "./style.css", to: "../release" }
 		]),
+		new SshWebpackPlugin({
+			port: process.env.SSH_PORT,
+			username: process.env.SSH_USER,
+			privateKey: require("fs").readFileSync(process.env.SSH_KEY),
+			from: "./release",
+			host: process.env.DEV_HOST,
+			before: process.env.DEV_CLEAN,
+			to: process.env.DEV_PATH
+		}),
 		new BrowserSyncPlugin({
 			host: "localhost",
 			port: 3000,
