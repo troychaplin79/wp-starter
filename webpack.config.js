@@ -4,9 +4,10 @@
 require("dotenv").config();
 const path = require("path");
 const { resolve } = require("path");
-const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const compression = require("compression-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const globImporter = require("node-sass-glob-importer");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
@@ -85,6 +86,16 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: "css/styles.css"
 		}),
+		new CopyPlugin([
+			{ from: "./*.php", to: "../release" },
+			{ from: "./acf-json", to: "../release/acf-json" },
+			{ from: "./blocks", to: "../release/blocks" },
+			{ from: "./components", to: "../release/components" },
+			{ from: "./dist", to: "../release/dist" },
+			{ from: "./functions", to: "../release/functions" },
+			{ from: "./templates", to: "../release/templates" },
+			{ from: "./style.css", to: "../release" }
+		]),
 		new BrowserSyncPlugin({
 			host: "localhost",
 			port: 3000,
