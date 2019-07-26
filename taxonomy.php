@@ -13,7 +13,7 @@ $current_term_name  = $get_queried_object->name;
 $current_term_slug  = $get_queried_object->slug;
 $get_current_tax    = get_taxonomy($current_tax_name);
 
-// Vars shared in all base templates
+// Core template vars
 $current_id      = $get_queried_object->term_id;
 $get_post_type   = $get_current_tax->object_type[0];
 $clean_post_type = str_replace('prefix-', '', $get_post_type); // TODO: update post type prefix

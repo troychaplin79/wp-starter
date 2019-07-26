@@ -10,7 +10,7 @@ if (have_posts()) :
     while (have_posts()) :
         the_post();
         
-        // Vars shared in all base templates
+        // Core template vars
         $current_id      = get_the_ID();
         $get_post_type   = get_post_type($current_id);
         $clean_post_type = str_replace('prefix-', '', $get_post_type); // TODO: document this option
@@ -19,7 +19,6 @@ if (have_posts()) :
         require_once get_template_directory() . '/header.php';
         require_once get_template_directory() . '/blocks/banner/' . $template_name . '.php';
         
-        // Create main element and get the page content
         echo '<main>';
             the_content();
         echo '</main>';

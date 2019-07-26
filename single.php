@@ -10,7 +10,7 @@ if (have_posts()) :
     while (have_posts()) :
         the_post();
 
-        // Vars shared in all base templates
+        // Core template vars
         $current_id      = get_the_ID();
         $get_post_type   = get_post_type($current_id);
         $clean_post_type = str_replace('prefix-', '', $get_post_type); // TODO: document this option
