@@ -1,7 +1,7 @@
 // Import main stylesheet
 // -------------------------
 
-import '../scss/styles.scss';
+import "../scss/styles.scss";
 
 // ES6 support via polyfills
 // -------------------------
@@ -16,13 +16,13 @@ import '../scss/styles.scss';
 // Check for jQuery
 window.onload = function() {
 	if (window.jQuery) {
-		console.log('jQuery is ready to go');
+		console.log("jQuery is ready to go");
 	} else {
-		console.log('jQuery is not available');
+		console.log("jQuery is not available");
 	}
 };
 
 // Testing that things are working
 // -------------------------
 
-console.log('welcome to webpack');
+console.log("welcome to webpack");

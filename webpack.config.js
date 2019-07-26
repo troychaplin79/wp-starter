@@ -3,6 +3,7 @@
  */
 require("dotenv").config();
 const path = require("path");
+const { resolve } = require("path");
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const compression = require("compression-webpack-plugin");
@@ -71,7 +72,11 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new CleanWebpackPlugin(),
+		new CleanWebpackPlugin({
+			cleanOnceBeforeBuildPatterns: [resolve("dist")],
+			cleanAfterEveryBuildPatterns: [resolve("release")],
+			verbose: true
+		}),
 		new compression({
 			test: /\.(js|css|map)(\?.*)?$/i,
 			filename: "[path].gz[query]",
