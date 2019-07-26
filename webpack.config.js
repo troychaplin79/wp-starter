@@ -1,8 +1,7 @@
 /**
  * WordPress Webpack Config
  */
-
-// Webpack Dependencies
+require("dotenv").config();
 const path = require("path");
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
@@ -80,12 +79,11 @@ module.exports = {
 		}),
 		new MiniCssExtractPlugin({
 			filename: "css/styles.css"
-			// filename: "css/[name].css",
 		}),
 		new BrowserSyncPlugin({
 			host: "localhost",
 			port: 3000,
-			proxy: "https://local.multitenant.ca",
+			proxy: process.env.LOCAL_URL,
 			files: [
 				"*.php",
 				"acf-json/**/*",
