@@ -76,7 +76,6 @@ module.exports = {
 	plugins: [
 		new CleanWebpackPlugin({
 			cleanOnceBeforeBuildPatterns: [resolve("dist/**/*")],
-			// cleanAfterEveryBuildPatterns: [resolve("release/**/*")],
 			verbose: true
 		}),
 		new CompressionPlugin({
