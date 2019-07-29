@@ -6,7 +6,7 @@
 
 .c-comments .comment-body {
 	display: block;
-	content: '';
+	content: "";
 	clear: both;
 
 	img {
@@ -20,7 +20,7 @@
 		font-family: $font-header;
 		font-size: $pixel24;
 		font-weight: 400;
-		color: $blue;
+		color: $primary_one;
 
 		cite {
 			font-style: normal;
@@ -45,7 +45,7 @@
 	padding: 0 0 0 30px;
 	border-left: 1px solid #d6d6d6;
 
-	@include media('>s') {
+	@include media(">s") {
 		margin-left: 40px;
 	}
 
@@ -61,14 +61,14 @@
 .c-comments .comment-reply-link {
 	font-size: $pixel14;
 	color: white;
-	background-color: $blue;
+	background-color: $primary_one;
 	padding: 10px 25px;
 	border-radius: 3px;
 	transition: $transition-2;
 
 	&:hover {
 		color: white;
-		background-color: $orange;
+		background-color: $primary_two;
 	}
 }
 
@@ -98,13 +98,13 @@
 		border: 1px solid $grey-pale;
 		background-color: $grey-white;
 
-		@include media('>s') {
+		@include media(">s") {
 			font-size: $pixel18;
 		}
 	}
 }
 
-@include media('>s') {
+@include media(">s") {
 	.comment-form-author,
 	.comment-form-email,
 	.comment-form-url {
@@ -121,7 +121,7 @@
 		text-align: center;
 		text-transform: capitalize;
 		white-space: nowrap;
-		background-color: $blue;
+		background-color: $primary_one;
 		padding: 10px 25px;
 		border-radius: 3px;
 		border: none;
@@ -129,10 +129,10 @@
 
 		&:hover {
 			color: white;
-			background-color: $orange;
+			background-color: $primary_two;
 		}
 
-		@include media('>s') {
+		@include media(">s") {
 			font-size: $pixel16;
 			padding: 15px 30px;
 		}

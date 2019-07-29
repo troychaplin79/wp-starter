@@ -8,11 +8,11 @@
 
 .u-content {
 	a {
-		color: $orange;
+		color: $primary_two;
 		font-weight: 700;
 
 		&:hover {
-			color: $blue;
+			color: $primary_one;
 		}
 	}
 }
@@ -42,7 +42,7 @@
 .u-clearfix {
 	&:before,
 	&:after {
-		content: ' ';
+		content: " ";
 		display: table;
 	}
 

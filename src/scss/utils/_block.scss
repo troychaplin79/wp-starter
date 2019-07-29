@@ -7,12 +7,10 @@
 // ---------------
 
 .u-block {
-	padding: 30px $spacing-25;
-	// padding: $spacing-25;
+	padding: $spacing-25;
 
-	@include media('>s') {
-		padding: 60px $spacing-30;
-		// padding: $spacing-40 $spacing-30;
+	@include media(">s") {
+		padding: $spacing-40 $spacing-30;
 	}
 }
 
@@ -29,14 +27,6 @@
 	color: white;
 }
 
-.u-block--blue {
-	background-color: $blue;
-}
-
-.u-block--orange {
-	background-color: $orange;
-}
-
 .u-block--fadeout {
 	background-image: linear-gradient(to bottom, $grey-white, white 120px);
 }
@@ -51,8 +41,6 @@
 .u-block--white:not(.u-block--full) + .u-block--white,
 .u-block--grey:not(.u-block--full) + .u-block--grey,
 .u-block--black:not(.u-block--full) + .u-block--black,
-.u-block--blue:not(.u-block--full) + .u-block--blue,
-.u-block--orange:not(.u-block--full) + .u-block--orange,
 .u-block--fadeout:not(.u-block--full) + .u-block--white {
 	padding-top: 0;
 }
@@ -76,6 +64,5 @@
 }
 
 .u-block--f {
-	// max-width: 100%;
 	padding: 0 !important;
 }

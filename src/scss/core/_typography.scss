@@ -85,7 +85,7 @@ a[href^='tel:'] {
 		background: none;
 	}
 	@include media('>s') {
-		color: $orange;
+		color: $primary_two;
 		font-weight: 400;
 	}
 }
