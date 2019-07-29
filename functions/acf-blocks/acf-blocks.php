@@ -35,6 +35,7 @@ function acf_blocks_allowed_types($allowed_blocks, $post)
     // add all custom acf blocks here, restrict to post types in register_custom_acf_blocks functions
     $allowed_blocks = array(
         'acf/text-content',
+        'gravityforms/form',
     );
 
     return $allowed_blocks;
