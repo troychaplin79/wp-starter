@@ -6,7 +6,6 @@
  * @category Constants
  * @version 1.0
  */
-
 define('THEME_VERSION', '0.0.1');
 
 /**
@@ -36,7 +35,7 @@ require_once get_template_directory() . '/functions/global/global.php';
  * @version 1.0
  */
 if (is_admin()) {
-    include_once get_template_directory() . '/functions/admin/admin.php';
+    require_once get_template_directory() . '/functions/admin/admin.php';
 }
 
 /**
@@ -46,9 +45,8 @@ if (is_admin()) {
  * @package Public Functions
  * @version 1.0
  */
-
 if (! is_admin()) {
-    include_once get_template_directory() . '/functions/public/public.php';
+    require_once get_template_directory() . '/functions/public/public.php';
 }
 
 /**
@@ -59,5 +57,5 @@ if (! is_admin()) {
  * @version 1.0
  */
 if ('DEV' === getenv('ENV_SERVER_ENV')) {
-    include_once get_template_directory() . '/functions/dev/dev.php';
+    require_once get_template_directory() . '/functions/dev/dev.php';
 }

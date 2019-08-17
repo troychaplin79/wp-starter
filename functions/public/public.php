@@ -8,7 +8,7 @@
  * @version  1.0
  */
 
-function wpbase_front_end_enqueues()
+function wpstarter_front_end_enqueues()
 {
     // Remove jQuery on Front End
     if (! is_admin()) {
@@ -36,7 +36,7 @@ function wpbase_front_end_enqueues()
     wp_enqueue_style('styles', $theme_stylesheet_path, false, THEME_VERSION, 'screen');
     wp_enqueue_script('scripts', $theme_javascript_path, null, THEME_VERSION, true);
 }
-add_action('wp_enqueue_scripts', 'wpbase_front_end_enqueues');
+add_action('wp_enqueue_scripts', 'wpstarter_front_end_enqueues');
 
 
 /**
@@ -47,10 +47,10 @@ add_action('wp_enqueue_scripts', 'wpbase_front_end_enqueues');
  * @category Scripts and Styles
  * @version  1.0
  */
-function wpbase_enqueue_comments_reply()
+function wpstarter_enqueue_comments_reply()
 {
     if (get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
 }
-add_action('comment_form_before', 'wpbase_enqueue_comments_reply');
+add_action('comment_form_before', 'wpstarter_enqueue_comments_reply');

@@ -1,11 +1,19 @@
-/src export-ignore
+# Dot Files
 /.browserslistrc export-ignore
 /.gitattributes export-ignore
 /.gitignore export-ignore
 /.jshintrc export-ignore
 /.postcssrc.js export-ignore
+
+# Config Files
 /composer.json export-ignore
 /package-lock.json export-ignore
 /package.json export-ignore
 /README.md export-ignore
 /webpack.config.js export-ignore
+
+# Folders
+/src export-ignore
+
+# Single Files
+/functions/dev/dev.php export-ignore
