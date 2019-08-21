@@ -61,7 +61,7 @@ function set_allowed_core_blocks($final_blocks, $post)
 add_filter('allowed_block_types', 'set_allowed_core_blocks', 10, 2);
 
 /**
- * Modify Heading Block Rendering
+ * Modify ADDBLOCKNAME Block Rendering
  *
  * @package Blocks
  * @category Gutenberg Supports
