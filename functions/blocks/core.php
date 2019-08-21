@@ -68,9 +68,9 @@ add_filter('allowed_block_types', 'set_allowed_core_blocks', 10, 2);
  * @version 1.0
  * @see https://developer.wordpress.org/reference/functions/render_block/
  */
-function modify_heading_block($block_content, $block)
+function modify_ADDBLOCKNAME_block($block_content, $block)
 {
-    if ('core/heading' !== $block['blockName']) {
+    if ('core/ADDBLOCKNAME' !== $block['ADDBLOCKNAME']) {
         return $block_content;
     }
 
@@ -81,7 +81,7 @@ function modify_heading_block($block_content, $block)
 
     return $return;
 }
-add_filter('render_block', 'modify_heading_block', 10, 2);
+add_filter('render_block', 'modify_BLOCKNAME_block', 10, 2);
 
 /**
  * Remove / Customize Block Inspector Elements
