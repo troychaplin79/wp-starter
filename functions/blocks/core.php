@@ -2,8 +2,8 @@
 /**
  * Disable gutenberg front end styles
  *
- * @package Theme ACF Supports
- * @category ACF + Gutenberg
+ * @package Blocks
+ * @category Gutenberg Supports
  * @version 1.0
  */
 function dequeue_gutenberg_library()
@@ -15,8 +15,8 @@ add_action('wp_print_styles', 'dequeue_gutenberg_library', 100);
 /**
  * Specify allowed core blocks
  *
- * @package Theme ACF Supports
- * @category ACF + Gutenberg
+ * @package Blocks
+ * @category Gutenberg Supports
  * @version 1.0
  * @see other uses for this function: https://rudrastyh.com/gutenberg/remove-default-blocks.html
  * @see a list of core blocks: https://wpdevelopment.courses/a-list-of-all-default-gutenberg-blocks-in-wordpress-5-0/
@@ -63,7 +63,7 @@ add_filter('allowed_block_types', 'set_allowed_core_blocks', 10, 2);
 /**
  * Modify Heading Block Rendering
  *
- * @package Block Rendering
+ * @package Blocks
  * @category Gutenberg Supports
  * @version 1.0
  * @see https://developer.wordpress.org/reference/functions/render_block/
@@ -86,7 +86,7 @@ add_filter('render_block', 'modify_heading_block', 10, 2);
 /**
  * Remove / Customize Block Inspector Elements
  *
- * @package Block Options
+ * @package Blocks
  * @category Gutenberg Supports
  * @version 1.0
  * @see https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-font-sizes
