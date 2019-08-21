@@ -31,6 +31,7 @@ function set_allowed_core_blocks($final_blocks, $post)
         'core/list',
         'core/quote',
         'core/video',
+        'core/block', // reusable blocks
         // 'core/table', // TODO: create custom render_block function
         // 'core/code', // TODO: create custom render_block function
         // 'core/button', // TODO: create custom render_block function
@@ -68,9 +69,9 @@ add_filter('allowed_block_types', 'set_allowed_core_blocks', 10, 2);
  * @version 1.0
  * @see https://developer.wordpress.org/reference/functions/render_block/
  */
-function modify_ADDBLOCKNAME_block($block_content, $block)
+function modify_BLOCKNAME_block($block_content, $block)
 {
-    if ('core/ADDBLOCKNAME' !== $block['ADDBLOCKNAME']) {
+    if ('core/heading' !== $block['blockName']) {
         return $block_content;
     }
 
