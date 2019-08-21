@@ -34,53 +34,13 @@ function acf_blocks_allowed_types($allowed_blocks, $post)
 {
     // add all custom acf blocks here, restrict to post types in register_custom_acf_blocks functions
     $allowed_blocks = array(
-        // 'acf/text-content',
-
-        // common
-        'core/paragraph',
-        'core/image',
-        'core/heading',
-        'core/list',
-        'core/quote',
-        // 'core/file', // TODO: consider to future implementation
-        'core/video',
-
-        // formatting
-        // 'core/table', // TODO: create custom version or modify output
-        // 'core/code', // TODO: consider to future implementation
-        'core/html', // TODO: make visible only to admins
-
-        // layout
-        // 'core/button', // TODO: create custom version or modify output
-        // 'core/columns', // TODO: create custom version or modify output
-        // 'core/media-text', // TODO: create custom version or modify output
-
-        // widgets
-        'core/shortcode', // TODO: make visible only to admins temporarilyduring migration, to be removed once upgrade is complete
-        // 'core/item',
-        // 'core/item',
-        // 'core/item',
-
-        // topic
-        // 'core/item',
-        // 'core/item',
-        // 'core/item',
-        // 'core/item',
-
-        // topic
-        // 'core/item',
-        // 'core/item',
-        // 'core/item',
-        // 'core/item',
-        
-
+        'acf/text-content',
         'gravityforms/form',
     );
 
     return $allowed_blocks;
 }
 add_filter('allowed_block_types', 'acf_blocks_allowed_types', 10, 2);
-
 
 /**
  * Register the Blocks
@@ -111,7 +71,6 @@ function register_custom_acf_blocks()
     }
 }
 add_action('acf/init', 'register_custom_acf_blocks');
-
 
 /**
  * Disable gutenberg front end styles
