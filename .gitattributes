@@ -16,4 +16,4 @@
 /src export-ignore
 
 # Single Files
-/functions/dev/dev.php export-ignore
+# /functions/dev/dev.php export-ignore
