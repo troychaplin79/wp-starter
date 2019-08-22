@@ -62,27 +62,37 @@ function set_allowed_core_blocks($final_blocks, $post)
 add_filter('allowed_block_types', 'set_allowed_core_blocks', 10, 2);
 
 /**
- * Modify ADDBLOCKNAME Block Rendering
+ * Modify Block Markup
  *
  * @package Blocks
  * @category Gutenberg Supports
  * @version 1.0
  * @see https://developer.wordpress.org/reference/functions/render_block/
+ * TODO: trying to figure out how to fully modify the core/columns front end markup
  */
-function modify_BLOCKNAME_block($block_content, $block)
+function modify_block_markup($block_content, $block)
 {
-    if ('core/heading' !== $block['blockName']) {
-        return $block_content;
+    // echo '<pre>';
+    // var_dump($block);
+    // echo '</pre>';
+
+    switch ($block['blockName']) {
+        case 'core/columns':
+            $content = '<div class="u-block u-block--grey">';
+            $content .= $block_content;
+            $content .= '</div>';
+
+            echo '<pre>';
+            print_r($block);
+            echo '</pre>';
+
+            return $block_content;
+            break;
     }
 
-    $return = '<div class="classname">';
-    $return .= '<p>Custom Output</p>';
-    $return .= $block_content;
-    $return .= '</div>';
-
-    return $return;
+    return $block_content;
 }
-add_filter('render_block', 'modify_BLOCKNAME_block', 10, 2);
+add_filter('render_block', 'modify_block_markup', 10, 2);
 
 /**
  * Remove / Customize Block Inspector Elements
