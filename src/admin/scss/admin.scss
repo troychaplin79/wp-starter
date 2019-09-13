@@ -1,0 +1,37 @@
+/**
+ * Admin Area
+ */
+
+//
+// Remove specific dropdowns from the core block tools
+// ------------------------
+
+[data-type="core/heading"],
+[data-type="core/paragraph"],
+[data-type="core/list"],
+[data-type="core/quote"],
+[data-type="core/button"],
+[data-type="core/table"] {
+	.editor-format-toolbar .components-dropdown-menu {
+		display: none;
+	}
+}
+
+//
+// Editing Area
+// ------------------------
+
+// Modify the options found under the vertical 3 dot icons in top right corner
+// .components-menu-group {
+// 	&:not(:first-of-type) {
+// 		display: none;
+// 	}
+
+// 	button:first-of-type {
+// 		display: none;
+// 	}
+// }
+
+// .components-panel__body {
+// 	display: none;
+// }

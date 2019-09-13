@@ -1,13 +1,10 @@
-// Import main stylesheet
-// -------------------------
-
-import "../scss/styles.scss";
-
+//
 // ES6 support via polyfills
 // -------------------------
 
 // import "@babel/polyfill";
 
+//
 // Include jQuery in project
 // -------------------------
 
@@ -22,6 +19,7 @@ window.onload = function() {
 	}
 };
 
+//
 // Testing that things are working
 // -------------------------
 
