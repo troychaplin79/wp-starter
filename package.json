@@ -12,18 +12,18 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"watch": "webpack --mode=development --config webpack.build.js --watch --colors",
-		"dev": "webpack --mode=development --env=dev --config webpack.config.js ; rm -rf ./release",
-		"stage": "webpack --mode=production --env=stage --config webpack.config.js ; rm -rf ./release",
-		"prod": "webpack --mode=production --env=prod --config webpack.config.js ; rm -rf ./release"
+		"build": "webpack --mode=development --config webpack.build.js",
+		"dev": "webpack --mode=development --env=dev --config webpack.config.js && rm -rf ./release",
+		"prod": "webpack --mode=production --env=prod --config webpack.config.js"
 	},
 	"dependencies": {
-		"dompurify": "^1.0.11",
+		"dompurify": "^2.0.0",
 		"jquery": "^3.4.1"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.5.5",
-		"@babel/polyfill": "^7.4.4",
-		"@babel/preset-env": "^7.5.5",
+		"@babel/core": "^7.6.0",
+		"@babel/polyfill": "^7.6.0",
+		"@babel/preset-env": "^7.6.0",
 		"autoprefixer": "^9.6.1",
 		"babel-loader": "^8.0.6",
 		"browser-sync": "^2.26.7",
@@ -35,18 +35,20 @@
 		"css-mqpacker": "^7.0.0",
 		"cssnano": "^4.1.10",
 		"cssnano-preset-advanced": "^4.0.7",
-		"dotenv": "^8.0.0",
+		"dotenv": "^8.1.0",
+		"extract-loader": "^3.1.0",
+		"file-loader": "^4.2.0",
 		"jshint": "^2.10.2",
 		"mini-css-extract-plugin": "^0.8.0",
 		"node-sass": "^4.12.0",
 		"node-sass-glob-importer": "^5.3.2",
 		"postcss-loader": "^3.0.0",
 		"postcss-pxtorem": "^4.0.1",
-		"sass-loader": "^7.2.0",
+		"sass-loader": "^8.0.0",
 		"ssh-webpack-plugin": "^0.1.7",
 		"uglifyjs-webpack-plugin": "^2.2.0",
-		"webpack": "^4.39.2",
-		"webpack-cli": "^3.3.6",
-		"webpack-merge": "^4.2.1"
+		"webpack": "^4.40.1",
+		"webpack-cli": "^3.3.8",
+		"webpack-merge": "^4.2.2"
 	}
 }

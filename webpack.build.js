@@ -1,24 +1,23 @@
 /**
  * WordPress Webpack Config
  */
-require("dotenv").config();
 const path = require("path");
 const { resolve } = require("path");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+require("dotenv").config();
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const copyWebpackPlugin = require("copy-webpack-plugin");
-const globImporter = require("node-sass-glob-importer");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
-// Build Config
 module.exports = {
-	entry: {
-		scripts: "./src/js/index.js"
-	},
+	entry: [
+		"./src/js/index.js",
+		"./src/scss/styles.scss",
+		"./src/admin/scss/admin.scss",
+		"./src/admin/scss/editor.scss"
+	],
 	output: {
-		filename: "js/[name].js",
+		filename: "js/scripts.js",
 		path: path.resolve(__dirname, "dist")
 	},
 	module: {
@@ -36,9 +35,17 @@ module.exports = {
 			{
 				test: /\.scss$/,
 				use: [
-					MiniCssExtractPlugin.loader,
 					{
-						loader: "css-loader",
+						loader: "file-loader",
+						options: {
+							name: "css/[name].css"
+						}
+					},
+					{
+						loader: "extract-loader"
+					},
+					{
+						loader: "css-loader?-url",
 						options: {
 							sourceMap: true
 						}
@@ -52,20 +59,7 @@ module.exports = {
 					{
 						loader: "sass-loader",
 						options: {
-							sourceMap: true,
-							importer: globImporter()
-						}
-					}
-				]
-			},
-			{
-				test: /\.(png|jpg|gif)$/,
-				use: [
-					{
-						loader: "file-loader",
-						options: {
-							outputPath: "./dist/images",
-							name: "[name].[ext]"
+							sourceMap: true
 						}
 					}
 				]
@@ -73,27 +67,15 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new CleanWebpackPlugin({
-			cleanOnceBeforeBuildPatterns: [resolve("dist/**/*")],
-			verbose: true
-		}),
 		new CompressionPlugin({
 			test: /\.(js|css|map)(\?.*)?$/i,
 			filename: "[path].gz[query]",
 			algorithm: "gzip"
 		}),
-		new MiniCssExtractPlugin({
-			filename: "css/styles.css"
-		}),
 		new copyWebpackPlugin([
-			{ from: "./*.php", to: "../release" },
-			{ from: "./acf-json", to: "../release/acf-json" },
-			{ from: "./blocks", to: "../release/blocks" },
-			{ from: "./components", to: "../release/components" },
-			{ from: "./dist", to: "../release/dist" },
-			{ from: "./functions", to: "../release/functions" },
-			{ from: "./templates", to: "../release/templates" },
-			{ from: "./style.css", to: "../release" }
+			{ from: "./src/favicons", to: "../dist/favicons" },
+			{ from: "./src/svg/logos", to: "../dist/svg/logos" },
+			{ from: "./src/svg/icons", to: "../dist/svg/icons" }
 		]),
 		new BrowserSyncPlugin({
 			host: "localhost",
@@ -101,13 +83,18 @@ module.exports = {
 			proxy: process.env.LOCAL_URL,
 			files: [
 				"*.php",
-				"acf-json/**/*",
+				"acf-json/*",
 				"blocks/**/*",
 				"components/**/*",
 				"dist/**/*",
 				"functions/**/*",
 				"templates/**/*"
-			]
+			],
+			watchOptions: {
+				ignoreInitial: true,
+				ignored: "dist/svg/icons/*.svg"
+			},
+			notify: false
 		})
 	],
 	optimization: {
