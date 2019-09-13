@@ -10,8 +10,8 @@
  */
 
 $breakpoints: (
-	s: 860px,
-	l: 1150px
+	s: 768px,
+	l: 1024px
 );
 
 /**
@@ -37,29 +37,13 @@ $spacing-60: 60px !default;
  * ============
  */
 
-$font-body: "Roboto", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto",
-	"Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-	"Segoe UI Symbol";
-
-$font-header: "Roboto Condensed", -apple-system, "BlinkMacSystemFont",
-	"Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji",
+$font-body: -apple-system, "blinkmacsystemfont", "Segoe UI", "Roboto",
+	"Helvetica Neue", "Helvetica", "Arial", sans-serif, "Apple Color Emoji",
 	"Segoe UI Emoji", "Segoe UI Symbol";
 
-/**
- * Colors
- * =============
- */
-
-$grey-white: #f3f3f3;
-$grey-pale: #e6e6e6;
-$grey-light: #8f8f8f;
-$grey-medium: #6f6f6f;
-$grey-dark: #555555;
-$black: #1f1f1f;
-
-// TODO: search and replace these colours in base scss files
-$primary_one: blue;
-$primary_two: green;
+$font-header: -apple-system, "blinkmacsystemfont", "Segoe UI", "Roboto",
+	"Helvetica Neue", "Helvetica", "Arial", sans-serif, "Apple Color Emoji",
+	"Segoe UI Emoji", "Segoe UI Symbol";
 
 /**
  * Font Sizes
@@ -75,6 +59,27 @@ $pixel32: 32px;
 $pixel42: 42px;
 $pixel48: 48px;
 $pixel62: 62px;
+
+/**
+ * Colors
+ * =============
+ */
+
+$black: #222222;
+
+$grey-darkest: #4c4c4c;
+$grey-darker: #838383;
+$grey-dark: #a7a6a5;
+
+$grey: #c9c9c9;
+
+$grey-light: #dfdfdf;
+$grey-lighter: #efefef;
+$grey-lightest: #f9f9f9;
+
+// TODO: search and replace these colours in base scss files
+$primary_one: blue;
+$primary_two: green;
 
 /**
  * Transitions

@@ -6,16 +6,21 @@
 // Clearfix
 // ---------------
 
-.u-content {
-	a {
-		color: $primary_two;
-		font-weight: 700;
+// main {
+// 	padding: 0 25px;
+// 	margin-bottom: 30px;
 
-		&:hover {
-			color: $primary_one;
-		}
-	}
-}
+// 	@include media(">s") {
+// 		padding: 0 30px;
+// 		margin-bottom: 50px;
+// 	}
+// }
+
+// main > *:not(.u-block) {
+// 	max-width: #{map-get($breakpoints, s)};
+// 	margin-left: auto;
+// 	margin-right: auto;
+// }
 
 // Visually Hide
 // ---------------
@@ -36,25 +41,11 @@
 	}
 }
 
-// Clearfix
-// ---------------
-
-.u-clearfix {
-	&:before,
-	&:after {
-		content: " ";
-		display: table;
-	}
-
-	&:after {
-		clear: both;
-	}
-}
-
 // Video Styles
 // ---------------
 
-.c-video {
+.c-video,
+.wp-block-embed__wrapper {
 	position: relative;
 	height: 0;
 	margin-bottom: 25px;

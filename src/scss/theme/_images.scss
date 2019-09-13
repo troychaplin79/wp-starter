@@ -1,34 +1,56 @@
-//
-// WordPress Images
-// https://casabona.org/2015/09/make-wp-caption-the-same-responsive-width-as-the-image/
-// -----------------
+/**
+ * WordPress Images
+ * =============
+ */
 
-.u-content {
-	.aligncenter {
-		margin: 0 auto;
+// Main Image Styles
+// -----------------------------
+
+.wp-block-image {
+	margin-bottom: 25px;
+
+	img {
+		background-color: $grey-lighter;
+		max-width: #{map-get($breakpoints, s)};
+		width: 100%;
 	}
+}
 
-	.alignleft {
-		float: left;
-		margin: 0 30px 20px 0;
-	}
+.wp-block-image img,
+.wp-block-image .aligncenter {
+	margin: 0 auto 0 0;
+}
 
-	.alignright {
-		float: right;
-		margin: 0 0 20px 30px;
-	}
+.wp-block-image .alignleft {
+	float: left;
+	margin: 0 30px 25px 0;
+}
 
-	.c-image-caption {
-		display: table;
-		margin-bottom: 20px;
-	}
+.wp-block-image .alignright {
+	float: right;
+	margin: 0 0 25px 30px;
+}
 
-	.c-image-caption__text {
-		caption-side: bottom;
-		display: table-caption;
-		font-size: $pixel14;
-		line-height: 1.4;
-		background-color: $grey-white;
-		padding: 15px 20px;
+// Image with Caption Styles
+// -----------------------------
+
+.wp-block-image figure,
+figure.wp-block-image {
+	display: table;
+}
+
+.wp-block-image figcaption {
+	caption-side: bottom;
+	display: table-caption;
+	font-family: $font-serif;
+	font-style: italic;
+	font-size: $pixel14;
+	line-height: 1.5;
+	background-color: $grey-lighter;
+	padding: 20px 25px;
+
+	@include media(">s") {
+		font-size: 15px;
+		line-height: 1.6;
 	}
 }

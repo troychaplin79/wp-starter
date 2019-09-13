@@ -1,12 +1,13 @@
-//
-// WordPress Adminbar
-// -----------------
+/**
+ * WordPress Defaults
+ * =============
+ */
 
-// TODO: add this back to starter theme
-.logged-in.admin-bar .b-topbar {
-	// top: 46px;
+// Adminbar Modifications
+// -----------------------------
 
-	@media (min-width: 782px) {
+@media (min-width: 782px) {
+	.logged-in.admin-bar .b-navbar {
 		top: 32px;
 	}
 }

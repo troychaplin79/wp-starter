@@ -1,0 +1,70 @@
+/**
+ * WordPress Tables
+ * =============
+ */
+
+// Main Table Styles
+// -----------------------------
+
+// Tables
+// -----------------------------
+
+table {
+	width: 100%;
+	display: block; // used to force responsive
+	max-width: min-content; // used to force responsive
+	overflow-x: auto; // used to force responsive
+	font-size: $pixel16;
+
+	@include media(">s") {
+		font-size: $pixel18;
+	}
+
+	margin-bottom: $spacing-25;
+	// border-collapse: collapse;
+	// border-spacing: 0;
+	// white-space: nowrap;
+
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	ul,
+	ol {
+		font-size: $pixel16;
+
+		@include media(">s") {
+			font-size: $pixel18;
+		}
+	}
+}
+
+// No header row, use borders
+// table tr {
+// 	border-bottom: 1px solid $green-light;
+
+// 	&:first-of-type {
+// 		border-top: 1px solid $green-light;
+// 	}
+// }
+
+// Force header styling
+table tr {
+	&:not(:first-of-type) {
+		border-bottom: 1px solid;
+		border-color: rgba($brown, 0.15);
+	}
+
+	&:first-of-type {
+		font-weight: 600;
+		color: white;
+		background-color: rgba($brown, 0.6);
+	}
+}
+
+table thead tr td,
+table tr td {
+	padding: $spacing-25;
+}

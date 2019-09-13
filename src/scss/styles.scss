@@ -11,13 +11,14 @@
 
 @import "utils/block";
 @import "utils/grid";
-@import "utils/classes";
+@import "utils/utils";
 
 // From Theme
 // -------------------------
 
 @import "theme/wp-core";
 @import "theme/images";
+@import "theme/tables";
 @import "theme/comments";
 
 // Blocks
