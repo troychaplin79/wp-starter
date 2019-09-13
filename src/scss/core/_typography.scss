@@ -43,7 +43,7 @@ time {
 // -----------------------------
 
 a {
-	color: red;
+	color: $primary_one;
 	text-decoration: none;
 	font-weight: 500;
 	// outline: none;
@@ -102,6 +102,7 @@ h6 {
 	font-family: $font-header;
 	// font-weight: 500;
 	line-height: 1.2;
+	color: $black;
 
 	&:not(:last-child) {
 		margin-bottom: $spacing-25;
@@ -139,7 +140,7 @@ ul,
 ol {
 	font-size: $pixel16;
 	line-height: 1.5;
-	color: $grey-dark;
+	color: $black;
 
 	&:not(:last-child) {
 		margin-bottom: $spacing-25;
@@ -197,7 +198,7 @@ blockquote {
 hr {
 	margin-bottom: $spacing-25;
 	border: none;
-	background-color: $grey-pale;
+	background-color: $grey-lightest;
 	height: 1px;
 }
 

@@ -19,7 +19,7 @@
 }
 
 .u-block--grey {
-	background-color: $grey-white;
+	background-color: $grey-lightest;
 }
 
 .u-block--black {
@@ -28,11 +28,11 @@
 }
 
 .u-block--fadeout {
-	background-image: linear-gradient(to bottom, $grey-white, white 120px);
+	background-image: linear-gradient(to bottom, $grey-lightest, white 120px);
 }
 
 .u-block--fadein {
-	background-image: linear-gradient(to top, $grey-white, white 120px);
+	background-image: linear-gradient(to top, $grey-lightest, white 120px);
 }
 
 // Block Spacing

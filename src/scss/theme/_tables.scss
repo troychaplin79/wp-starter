@@ -54,13 +54,13 @@ table {
 table tr {
 	&:not(:first-of-type) {
 		border-bottom: 1px solid;
-		border-color: rgba($brown, 0.15);
+		border-color: rgba($black, 0.15);
 	}
 
 	&:first-of-type {
 		font-weight: 600;
 		color: white;
-		background-color: rgba($brown, 0.6);
+		background-color: rgba($black, 0.6);
 	}
 }
 

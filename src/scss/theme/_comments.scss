@@ -25,7 +25,7 @@
 	}
 
 	.comment-author {
-		font-family: $font-serif;
+		font-family: $font-body;
 		font-size: $pixel24;
 		font-weight: 400;
 		color: $primary_one;
@@ -36,7 +36,7 @@
 	}
 
 	.comment-meta {
-		font-family: $font-serif;
+		font-family: $font-body;
 		padding-bottom: 10px;
 
 		a {
@@ -51,7 +51,7 @@
 	list-style-type: none;
 	margin: 25px 0;
 	padding: 0 0 0 30px;
-	border-left: 1px solid #d6d6d6;
+	border-left: 1px solid $grey-light;
 
 	@include media(">s") {
 		margin-left: 40px;
@@ -97,7 +97,7 @@
 
 	input,
 	textarea {
-		font-family: $font-sans;
+		font-family: $font-body;
 		font-size: $pixel16;
 		line-height: 1.5;
 		color: $black;
