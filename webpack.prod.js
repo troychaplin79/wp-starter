@@ -16,6 +16,7 @@ module.exports = merge(baseConfig, {
 			{ from: "./components", to: "../release/components" },
 			{ from: "./dist", to: "../release/dist" },
 			{ from: "./functions", to: "../release/functions" },
+			{ from: "./layouts", to: "../release/layouts" },
 			{ from: "./templates", to: "../release/templates" },
 			{ from: "./style.css", to: "../release" }
 		]),

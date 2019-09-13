@@ -88,6 +88,7 @@ module.exports = {
 				"components/**/*",
 				"dist/**/*",
 				"functions/**/*",
+				"layouts/**/*",
 				"templates/**/*"
 			],
 			watchOptions: {

@@ -19,9 +19,11 @@ if (have_posts()) :
         require_once get_template_directory() . '/header.php';
         require_once get_template_directory() . '/blocks/banner/' . $template_name . '.php';
         
-        echo '<main>';
-            the_content();
-        echo '</main>';
+        // echo '<main>';
+        //     the_content();
+        // echo '</main>';
+
+        require_once get_template_directory() . '/layouts/multicol-am.php';
 
         require_once get_template_directory() . '/footer.php';
     endwhile;
