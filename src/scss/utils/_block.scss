@@ -68,10 +68,6 @@
 // Block Spacing
 // ---------------
 
-// .u-block + :not(.u-block) {
-// 	border-top: 10px solid red;
-// }
-
 .u-block:not(.u-block--grey) + .u-block:not(.u-block--grey),
 .u-block--grey:not(.u-block--full) + .u-block--grey,
 .u-block--black:not(.u-block--full) + .u-block--black,
