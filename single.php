@@ -13,7 +13,7 @@ if (have_posts()) :
         // Core template vars
         $current_id      = get_the_ID();
         $get_post_type   = get_post_type($current_id);
-        $clean_post_type = str_replace('prefix-', '', $get_post_type); // TODO: document this option
+        $clean_post_type = str_replace('prefix-', '', $get_post_type);
         $template_name   = sanitize_title($clean_post_type);
 
         require_once get_template_directory() . '/header.php';
@@ -24,8 +24,3 @@ if (have_posts()) :
 endif;
 
 wp_reset_postdata();
-
-// Load page information in dev
-if ('DEV' === getenv('ENV_SERVER_ENV')) {
-    get_page_info();
-}
