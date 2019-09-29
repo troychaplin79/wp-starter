@@ -14,26 +14,30 @@
 
 	// Change base block spacing above small breakpoint
 	@include media(">s") {
-		padding: $spacing-40 $spacing-30;
-		margin-left: -#{$spacing-30};
-		margin-right: -#{$spacing-30};
+		padding-top: $spacing-40;
+		padding-bottom: $spacing-40;
 	}
 
-	// Constrain width of children
+	// Set max width of u-block children
 	> * {
 		max-width: #{map-get($breakpoints, s)};
-		// margin: 0 auto;
 		margin-left: auto;
 		margin-right: auto;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 
-	// Add spacing to following items if they are not u-block
-	& + :not(.u-block) {
+	// Add spacing to items that immediately follow a u-block if they are not wrapped in u-block
+	& + *:not(.u-block) {
+		margin-top: 0;
 		padding-top: $spacing-25;
+	}
 
-		@include media(">s") {
-			padding-top: $spacing-30;
-		}
+	// Remove top spacing on first item, which is set in _typography.scss
+	& > *:first-child {
+		margin-top: 0;
 	}
 }
 

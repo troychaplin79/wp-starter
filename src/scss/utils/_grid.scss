@@ -5,7 +5,7 @@
 
 .u-grid {
 	display: grid;
-	grid-gap: $spacing-30;
+	grid-gap: $spacing-25;
 
 	@include media(">s") {
 		grid-gap: $grid-gutter;
@@ -70,7 +70,7 @@
 	.u-grid {
 		display: flex;
 		flex-wrap: wrap;
-		margin-bottom: -#{$spacing-30} !important;
+		margin-bottom: -#{$spacing-25} !important;
 		// margin-bottom: -#{$grid-gutter} !important;
 
 		& + .c-button {
@@ -78,8 +78,7 @@
 		}
 
 		& > * {
-			margin-bottom: $spacing-30;
-			// grid-gap: $spacing-30;
+			margin-bottom: $spacing-25;
 
 			@include media(">s") {
 				margin-bottom: $grid-gutter;

@@ -6,10 +6,6 @@
 main {
 	padding: 0 $spacing-25;
 
-	@include media(">s") {
-		padding: 0 $spacing-30;
-	}
-
 	// Set max width for basic markup
 	& > *:not(.u-block) {
 		max-width: #{map-get($breakpoints, s)};
@@ -17,23 +13,9 @@ main {
 		margin-right: auto;
 	}
 
-	// Add spacing on first child of basic markup
-	& > *:not(.u-block):first-child {
-		padding-top: $spacing-25;
-
-		@include media(">s") {
-			padding-top: $spacing-30;
-		}
-	}
-
 	// Adjust spacing on last child of basic markup
 	& > *:not(.u-block):last-child {
 		padding-bottom: $spacing-25;
 		margin-bottom: 0;
-
-		@include media(">s") {
-			padding-bottom: $spacing-30;
-			margin-bottom: 0;
-		}
 	}
 }
