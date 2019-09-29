@@ -3,7 +3,7 @@
  * =============
  */
 
-.l-singlecol {
+main {
 	padding: 0 $spacing-25;
 
 	@include media(">s") {
@@ -13,7 +13,8 @@
 	// Set width for basic markup
 	& > *:not(.u-block) {
 		max-width: #{map-get($breakpoints, s)};
-		margin: 0 auto;
+		margin-left: auto;
+		margin-right: auto;
 
 		// Add spacing on first child of basic markup
 		&:first-child {
@@ -21,6 +22,15 @@
 
 			@include media(">s") {
 				padding-top: $spacing-30;
+			}
+		}
+
+		// Add spacing on last child of basic markup
+		&:last-child {
+			padding-bottom: $spacing-25;
+
+			@include media(">s") {
+				padding-bottom: $spacing-30;
 			}
 		}
 	}

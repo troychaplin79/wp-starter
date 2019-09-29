@@ -30,8 +30,6 @@ body {
 	color: $grey-dark;
 	font-family: $font-body;
 	margin-top: $nav-height;
-	// 	margin: 0;
-	// 	font-style: normal;
 }
 
 main,
@@ -46,8 +44,7 @@ a {
 	color: $primary_one;
 	text-decoration: none;
 	font-weight: 500;
-	// outline: none;
-	// cursor: pointer;
+	cursor: pointer;
 
 	&:hover {
 		// text-decoration: underline;
@@ -107,6 +104,8 @@ h6 {
 	&:not(:last-child) {
 		margin-bottom: $spacing-25;
 	}
+
+	// margin-bottom: $spacing-25;
 }
 
 h1 {

@@ -19,7 +19,7 @@ if (have_posts()) :
         require_once get_template_directory() . '/header.php';
         require_once get_template_directory() . '/blocks/banner/' . $template_name . '.php';
         
-        echo '<main class="l-singlecol">';
+        echo '<main>';
             the_content();
         echo '</main>';
 
