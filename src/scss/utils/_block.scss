@@ -6,11 +6,13 @@
 // Base Block Style
 // ---------------
 
+// Base block spacing
 .u-block {
 	padding: $spacing-25;
 	margin-left: -#{$spacing-25};
 	margin-right: -#{$spacing-25};
 
+	// Change base block spacing above small breakpoint
 	@include media(">s") {
 		padding: $spacing-40 $spacing-30;
 		margin-left: -#{$spacing-30};
@@ -68,9 +70,16 @@
 // Block Spacing
 // ---------------
 
+// Remove top padding when the same u-blocks follow each other
 .u-block:not(.u-block--grey) + .u-block:not(.u-block--grey),
 .u-block--grey:not(.u-block--full) + .u-block--grey,
 .u-block--black:not(.u-block--full) + .u-block--black,
 .u-block--fadeout:not(.u-block--full) + .u-block--white {
+	padding-top: 0;
+}
+
+// Remove top padding between u-block and non u-block
+.u-block:not(.u-block--grey) + *:not(.u-block),
+*:not(.u-block) + .u-block:not(.u-block--grey) {
 	padding-top: 0;
 }
