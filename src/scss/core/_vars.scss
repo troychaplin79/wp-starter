@@ -29,8 +29,6 @@ $grid-gutter: 25px !default;
 $spacing-25: 25px !default;
 $spacing-30: 30px !default;
 $spacing-40: 40px !default;
-$spacing-50: 50px !default;
-$spacing-60: 60px !default;
 
 /**
  * Fonts
@@ -65,19 +63,21 @@ $pixel62: 62px;
  * =============
  */
 
+// Base Black/Grey
 $black: #222222;
+$grey: #c9c9c9;
 
+// Dark Greys
 $grey-darkest: #4c4c4c;
 $grey-darker: #838383;
 $grey-dark: #a7a6a5;
 
-$grey: #c9c9c9;
-
+// Light Greys
 $grey-light: #dfdfdf;
 $grey-lighter: #efefef;
 $grey-lightest: #f3f3f3;
 
-// TODO: search and replace these colours in base scss files
+// Primary color; // TODO: search and replace these colours in base scss files
 $primary_one: blue;
 $primary_two: green;
 

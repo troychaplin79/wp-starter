@@ -3,25 +3,6 @@
  * =============
  */
 
-// Clearfix
-// ---------------
-
-// main {
-// 	padding: 0 25px;
-// 	margin-bottom: 30px;
-
-// 	@include media(">s") {
-// 		padding: 0 30px;
-// 		margin-bottom: 50px;
-// 	}
-// }
-
-// main > *:not(.u-block) {
-// 	max-width: #{map-get($breakpoints, s)};
-// 	margin-left: auto;
-// 	margin-right: auto;
-// }
-
 // Visually Hide
 // ---------------
 
@@ -41,7 +22,7 @@
 	}
 }
 
-// Video Styles
+// Video Block
 // ---------------
 
 .c-video,

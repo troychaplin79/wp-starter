@@ -36,28 +36,26 @@
 	}
 }
 
-.u-grid--5 {
-	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 5px;
-
-	@include media(">s") {
-		grid-template-columns: repeat(5, 1fr);
-		grid-gap: 5px;
-	}
-}
-
 /**
  * CSS Grid Modifiers
  * =============
  */
 
 @include media("<=s") {
-	.u-grid--s1 {
+	.u-grid--stack {
 		grid-template-columns: repeat(1, 1fr);
 	}
 }
 
-.u-grid--no-gutters {
+.u-grid--tight {
+	grid-gap: 5px;
+
+	@include media(">s") {
+		grid-gap: 5px;
+	}
+}
+
+.u-grid--flush {
 	grid-gap: 0;
 }
 
@@ -114,16 +112,6 @@
 		width: calc(25% - #{$grid-gutter - 5});
 
 		&:nth-child(4n) {
-			margin-right: 0 !important;
-		}
-	}
-
-	.u-grid--5 > * {
-		width: calc(20% - #{$grid-gutter - 46});
-		margin-bottom: 5px !important;
-		margin-right: 5px !important;
-
-		&:nth-child(5n) {
 			margin-right: 0 !important;
 		}
 	}
