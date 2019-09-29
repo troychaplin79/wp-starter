@@ -20,6 +20,7 @@ if (have_posts()) :
         require_once get_template_directory() . '/blocks/banner/' . $template_name . '.php';
         
         echo '<main>';
+            echo '<h1>' . get_the_title() . '</h1>'; // TODO temporary, can be removed
             the_content();
         echo '</main>';
 
