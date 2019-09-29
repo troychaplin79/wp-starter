@@ -4,7 +4,7 @@ function get_page_info()
     global $current_id, $get_post_type, $template_name, $current_tax_name, $current_term_slug;
 
     $meta = '<main>';
-    $meta .= '<div class="u-block u-block--white">';
+    $meta .= '<div class="u-block">';
 
     // Theme meta
     $get_current_theme     = wp_get_theme();

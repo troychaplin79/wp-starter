@@ -22,7 +22,9 @@
 	// Constrain width of children
 	> * {
 		max-width: #{map-get($breakpoints, s)};
-		margin: 0 auto;
+		// margin: 0 auto;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	// Add spacing to following items if they are not u-block
