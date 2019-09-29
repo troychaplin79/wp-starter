@@ -11,8 +11,13 @@
 
 @import "utils/block";
 @import "utils/grid";
-@import "utils/layouts";
 @import "utils/utils";
+
+// Layouts
+// -------------------------
+
+@import "utils/singlecol";
+// @import "utils/multicol";
 
 // From Theme
 // -------------------------

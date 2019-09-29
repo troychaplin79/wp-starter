@@ -19,11 +19,21 @@ if (have_posts()) :
         require_once get_template_directory() . '/header.php';
         require_once get_template_directory() . '/blocks/banner/' . $template_name . '.php';
         
-        // echo '<main>';
-        //     the_content();
-        // echo '</main>';
+        echo '<main class="l-singlecol">';
+            echo '<div class="u-block u-block--grey">';
+                echo '<h1>Block as first</h1>';
+            echo '</div>';
 
-        require_once get_template_directory() . '/layouts/multicol-am.php';
+            echo '<div class="u-block u-block--l">';
+                echo '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam odio ut tortor varius luctus. Suspendisse eu libero sodales, mollis justo id, dapibus ligula. Pellentesque fermentum ut augue vel volutpat. In a egestas justo. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam facilisis tellus in neque viverra, eu tristique tellus rutrum. Mauris ut risus eu ante lacinia dictum ac sed leo.</p>';
+            echo '</div>';
+
+            echo '<div class="u-block u-block--grey">';
+                echo '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam odio ut tortor varius luctus. Suspendisse eu libero sodales, mollis justo id, dapibus ligula. Pellentesque fermentum ut augue vel volutpat. In a egestas justo. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam facilisis tellus in neque viverra, eu tristique tellus rutrum. Mauris ut risus eu ante lacinia dictum ac sed leo.</p>';
+            echo '</div>';
+            
+            the_content();
+        echo '</main>';
 
         require_once get_template_directory() . '/footer.php';
     endwhile;

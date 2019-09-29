@@ -3,7 +3,7 @@
  * =============
  */
 
-// Utility Blocks
+// Base Block Style
 // ---------------
 
 .u-block {
@@ -12,11 +12,27 @@
 	@include media(">s") {
 		padding: $spacing-40 $spacing-30;
 	}
+
+	> * {
+		max-width: #{map-get($breakpoints, s)};
+		margin: 0 auto;
+	}
 }
 
-.u-block--white {
-	background-color: white;
+// Block Widths
+// ---------------
+
+.u-block--l > * {
+	max-width: #{map-get($breakpoints, l)};
+	margin: 0 auto;
 }
+
+.u-block--f {
+	padding: 0 !important;
+}
+
+// Block Colors
+// ---------------
 
 .u-block--grey {
 	background-color: $grey-lightest;
@@ -43,26 +59,4 @@
 .u-block--black:not(.u-block--full) + .u-block--black,
 .u-block--fadeout:not(.u-block--full) + .u-block--white {
 	padding-top: 0;
-}
-
-// Utility Widths
-// ---------------
-
-.u-block--s > * {
-	max-width: #{map-get($breakpoints, s)};
-	margin: 0 auto;
-}
-
-.u-block--m > * {
-	max-width: #{map-get($breakpoints, m)};
-	margin: 0 auto;
-}
-
-.u-block--l > * {
-	max-width: #{map-get($breakpoints, l)};
-	margin: 0 auto;
-}
-
-.u-block--f {
-	padding: 0 !important;
 }
