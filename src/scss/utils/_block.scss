@@ -8,14 +8,28 @@
 
 .u-block {
 	padding: $spacing-25;
+	margin-left: -#{$spacing-25};
+	margin-right: -#{$spacing-25};
 
 	@include media(">s") {
 		padding: $spacing-40 $spacing-30;
+		margin-left: -#{$spacing-30};
+		margin-right: -#{$spacing-30};
 	}
 
+	// Constrain width of children
 	> * {
 		max-width: #{map-get($breakpoints, s)};
 		margin: 0 auto;
+	}
+
+	// Add spacing to following items if they are not u-block
+	& + :not(.u-block) {
+		padding-top: $spacing-25;
+
+		@include media(">s") {
+			padding-top: $spacing-30;
+		}
 	}
 }
 
@@ -54,7 +68,11 @@
 // Block Spacing
 // ---------------
 
-.u-block--white:not(.u-block--full) + .u-block--white,
+// .u-block + :not(.u-block) {
+// 	border-top: 10px solid red;
+// }
+
+.u-block:not(.u-block--grey) + .u-block:not(.u-block--grey),
 .u-block--grey:not(.u-block--full) + .u-block--grey,
 .u-block--black:not(.u-block--full) + .u-block--black,
 .u-block--fadeout:not(.u-block--full) + .u-block--white {

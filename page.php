@@ -23,8 +23,14 @@ if (have_posts()) :
             echo '<div class="u-block u-block--grey">';
                 echo '<h1>Block as first</h1>';
             echo '</div>';
+            echo '<div class="u-block u-block--grey u-block--l">';
+                echo '<h1>Block as first</h1>';
+            echo '</div>';
 
             echo '<div class="u-block u-block--l">';
+                echo '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam odio ut tortor varius luctus. Suspendisse eu libero sodales, mollis justo id, dapibus ligula. Pellentesque fermentum ut augue vel volutpat. In a egestas justo. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam facilisis tellus in neque viverra, eu tristique tellus rutrum. Mauris ut risus eu ante lacinia dictum ac sed leo.</p>';
+            echo '</div>';
+            echo '<div class="u-block">';
                 echo '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam odio ut tortor varius luctus. Suspendisse eu libero sodales, mollis justo id, dapibus ligula. Pellentesque fermentum ut augue vel volutpat. In a egestas justo. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam facilisis tellus in neque viverra, eu tristique tellus rutrum. Mauris ut risus eu ante lacinia dictum ac sed leo.</p>';
             echo '</div>';
 
