@@ -29,15 +29,27 @@
 		}
 	}
 
-	// Add spacing to items that immediately follow a u-block if they are not wrapped in u-block
-	& + *:not(.u-block) {
-		margin-top: 0;
-		padding-top: $spacing-25;
-	}
-
 	// Remove top spacing on first item, which is set in _typography.scss
 	& > *:first-child {
 		margin-top: 0;
+	}
+}
+
+// Add spacing to items that immediately follow a u-block if they are not wrapped in u-block
+.u-block + *:not(.u-block) {
+	margin-top: 0;
+	padding-top: $spacing-25;
+
+	@include media(">s") {
+		padding-top: $spacing-40 - 5px;
+	}
+}
+
+*:not(.u-block) + .u-block {
+	margin-top: $spacing-25;
+
+	@include media(">s") {
+		margin-top: $spacing-40;
 	}
 }
 
@@ -46,7 +58,8 @@
 
 .u-block--l > * {
 	max-width: #{map-get($breakpoints, l)};
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .u-block--f {
