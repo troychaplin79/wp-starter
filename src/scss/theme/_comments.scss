@@ -28,7 +28,7 @@
 		font-family: $font-body;
 		font-size: $pixel24;
 		font-weight: 400;
-		color: $primary_one;
+		color: $prime_one;
 
 		cite {
 			font-style: normal;
@@ -69,14 +69,14 @@
 .c-comments .comment-reply-link {
 	font-size: $pixel14;
 	color: white;
-	background-color: $primary_one;
+	background-color: $prime_one;
 	padding: 10px 25px;
 	border-radius: 3px;
 	transition: $transition-2;
 
 	&:hover {
 		color: white;
-		background-color: $primary_two;
+		background-color: $prime_two;
 	}
 }
 
@@ -129,7 +129,7 @@
 		text-align: center;
 		text-transform: capitalize;
 		white-space: nowrap;
-		background-color: $primary_one;
+		background-color: $prime_one;
 		padding: 10px 25px;
 		border-radius: 3px;
 		border: none;
@@ -137,7 +137,7 @@
 
 		&:hover {
 			color: white;
-			background-color: $primary_two;
+			background-color: $prime_two;
 		}
 
 		@include media(">s") {
