@@ -1,11 +1,14 @@
-<?php
+<?php // @codingStandardsIgnoreLine
 /**
  * WordPress Taxonomy Template
  *
  * @category Core Template
+ *
  * @version 1.0
+ *
  * @see https://codex.wordpress.org/Post_Type_Templates
  */
+
 // Get taxonomy meta
 $get_queried_object = get_queried_object();
 $current_tax_name   = $get_queried_object->taxonomy;

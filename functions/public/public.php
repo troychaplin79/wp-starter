@@ -47,6 +47,7 @@ add_action('wp_enqueue_scripts', 'wpstarter_front_end_enqueues');
  * @category Scripts and Styles
  * @version  1.0
  */
+
 function wpstarter_enqueue_comments_reply()
 {
     if (get_option('thread_comments')) {

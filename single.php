@@ -3,9 +3,12 @@
  * WordPress Single Post Template
  *
  * @category Core Template
+ *
  * @version 1.0
+ *
  * @see https://codex.wordpress.org/Theme_Development#Single_Post_.28single.php.29
  */
+
 if (have_posts()) :
     while (have_posts()) :
         the_post();

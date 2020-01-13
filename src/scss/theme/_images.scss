@@ -7,28 +7,28 @@
 // -----------------------------
 
 .wp-block-image {
-	margin-bottom: 25px;
+    margin-bottom: 25px;
 
-	img {
-		background-color: $grey-lighter;
-		max-width: #{map-get($breakpoints, s)};
-		width: 100%;
-	}
+    img {
+        background-color: $grey-lighter;
+        max-width: #{map-get($breakpoints, s)};
+        width: 100%;
+    }
 }
 
 .wp-block-image img,
 .wp-block-image .aligncenter {
-	margin: 0 auto 0 0;
+    margin: 0 auto 0 0;
 }
 
 .wp-block-image .alignleft {
-	float: left;
-	margin: 0 30px 25px 0;
+    float: left;
+    margin: 0 30px 25px 0;
 }
 
 .wp-block-image .alignright {
-	float: right;
-	margin: 0 0 25px 30px;
+    float: right;
+    margin: 0 0 25px 30px;
 }
 
 // Image with Caption Styles
@@ -36,21 +36,21 @@
 
 .wp-block-image figure,
 figure.wp-block-image {
-	display: table;
+    display: table;
 }
 
 .wp-block-image figcaption {
-	caption-side: bottom;
-	display: table-caption;
-	font-family: $font-body;
-	font-style: italic;
-	font-size: $pixel14;
-	line-height: 1.5;
-	background-color: $grey-lighter;
-	padding: 20px 25px;
+    caption-side: bottom;
+    display: table-caption;
+    font-family: $font-body;
+    font-style: italic;
+    font-size: $pixel14;
+    line-height: 1.5;
+    background-color: $grey-lighter;
+    padding: 20px 25px;
 
-	@include media(">s") {
-		font-size: 15px;
-		line-height: 1.6;
-	}
+    @include media(">s") {
+        font-size: 15px;
+        line-height: 1.6;
+    }
 }

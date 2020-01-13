@@ -6,16 +6,16 @@
 // Remove specific dropdowns from the core block tools
 // ------------------------
 
-[data-type="core/heading"],
-[data-type="core/paragraph"],
-[data-type="core/list"],
-[data-type="core/quote"],
-[data-type="core/button"],
-[data-type="core/table"] {
-	.editor-format-toolbar .components-dropdown-menu {
-		display: none;
-	}
-}
+// [data-type="core/heading"],
+// [data-type="core/paragraph"],
+// [data-type="core/list"],
+// [data-type="core/quote"],
+// [data-type="core/button"],
+// [data-type="core/table"] {
+//     .editor-format-toolbar .components-dropdown-menu {
+//         display: none;
+//     }
+// }
 
 //
 // Editing Area

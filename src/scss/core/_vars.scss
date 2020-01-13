@@ -10,8 +10,8 @@
  */
 
 $breakpoints: (
-	s: 768px,
-	l: 1024px
+    s: 768px,
+    l: 1024px,
 );
 
 /**
@@ -36,12 +36,12 @@ $spacing-40: 40px !default;
  */
 
 $font-body: -apple-system, "blinkmacsystemfont", "Segoe UI", "Roboto",
-	"Helvetica Neue", "Helvetica", "Arial", sans-serif, "Apple Color Emoji",
-	"Segoe UI Emoji", "Segoe UI Symbol";
+    "Helvetica Neue", "Helvetica", "Arial", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
 
 $font-header: -apple-system, "blinkmacsystemfont", "Segoe UI", "Roboto",
-	"Helvetica Neue", "Helvetica", "Arial", sans-serif, "Apple Color Emoji",
-	"Segoe UI Emoji", "Segoe UI Symbol";
+    "Helvetica Neue", "Helvetica", "Arial", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
 
 /**
  * Font Sizes

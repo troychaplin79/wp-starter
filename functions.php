@@ -1,17 +1,19 @@
-<?php
+<?php // @codingStandardsIgnoreLine
 /**
  * Theme Constants
  *
  * @package Theme Includes
+ *
  * @category Constants
+ *
  * @version 1.0
  */
+
 define('THEME_VERSION', '0.0.1');
 
 /**
  * Include global functions
  */
-// require_once get_template_directory() . '/functions/blocks/acf-blocks.php';
 require_once get_template_directory() . '/functions/blocks/core.php';
 
 /**

@@ -12,11 +12,11 @@
 
 // Check for jQuery
 window.onload = function() {
-	if (window.jQuery) {
-		console.log("jQuery is ready to go");
-	} else {
-		console.log("jQuery is not available");
-	}
+    if (window.jQuery) {
+        console.log("jQuery is ready to go");
+    } else {
+        console.log("jQuery is not available");
+    }
 };
 
 //

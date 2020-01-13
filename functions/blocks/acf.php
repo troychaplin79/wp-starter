@@ -6,6 +6,7 @@
  * @category ACF + Gutenberg
  * @version 1.0
  */
+
 function acf_blocks_categories($categories, $post)
 {
     return array_merge(
@@ -20,7 +21,6 @@ function acf_blocks_categories($categories, $post)
 }
 add_filter('block_categories', 'acf_blocks_categories', 10, 2);
 
-
 /**
  * Disable all default gutenberg blocks
  *
@@ -30,6 +30,7 @@ add_filter('block_categories', 'acf_blocks_categories', 10, 2);
  * @see other uses for this function: https://rudrastyh.com/gutenberg/remove-default-blocks.html
  * @see a list of core blocks: https://wpdevelopment.courses/a-list-of-all-default-gutenberg-blocks-in-wordpress-5-0/
  */
+
 function acf_blocks_allowed_types($allowed_blocks, $post)
 {
     // add all custom acf blocks here, restrict to post types in register_custom_acf_blocks functions
@@ -50,6 +51,7 @@ add_filter('allowed_block_types', 'acf_blocks_allowed_types', 10, 2);
  * @version 1.0
  * @see https://www.advancedcustomfields.com/resources/acf_register_block/
  */
+
 function register_custom_acf_blocks()
 {
     // check function exists
@@ -79,6 +81,7 @@ add_action('acf/init', 'register_custom_acf_blocks');
  * @category ACF + Gutenberg
  * @version 1.0
  */
+
 function dequeue_gutenberg_library()
 {
     wp_dequeue_style('wp-block-library');

@@ -1,4 +1,4 @@
-<?php
+<?php // @codingStandardsIgnoreLine
 /**
  * Add editor stylesheet
 
@@ -6,6 +6,7 @@
  * @category Admin Enqueues
  * @version 1.0
  */
+
 add_theme_support('editor-styles');
 add_editor_style('dist/admin/editor.css');
 
@@ -19,6 +20,7 @@ add_editor_style('dist/admin/editor.css');
  * TODO: add admin resources to webpack builder
  * TODO: document this option
  */
+
 function wpstarter_admin_enqueue()
 {
     $theme_admin_support_path = get_template_directory_uri() . '/dist/admin';
@@ -49,6 +51,7 @@ add_image_size('give_me_a_name', 200, 200, true);
  *
  * TODO: customize admin menu order, include custom post types
  */
+
 function wpstarter_menu_order()
 {
     return array(

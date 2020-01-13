@@ -4,18 +4,18 @@
  */
 
 main {
-	padding: 0 $spacing-25;
+    padding: 0 $spacing-25;
 
-	// Set max width for basic markup
-	& > *:not(.u-block) {
-		max-width: #{map-get($breakpoints, s)};
-		margin-left: auto;
-		margin-right: auto;
-	}
+    // Set max width for basic markup
+    & > *:not(.u-block) {
+        max-width: #{map-get($breakpoints, s)};
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-	// Adjust spacing on last child of basic markup
-	& > *:not(.u-block):last-child {
-		padding-bottom: $spacing-25;
-		margin-bottom: 0;
-	}
+    // Adjust spacing on last child of basic markup
+    & > *:not(.u-block):last-child {
+        padding-bottom: $spacing-25;
+        margin-bottom: 0;
+    }
 }
