@@ -27,7 +27,7 @@ function wpstarter_front_end_enqueues()
     $theme_javascript_path = get_template_directory_uri() . '/dist/js/scripts.js.gz';
 
     // Change Paths for Local Development
-    if ('DEV' === getenv('ENV_CURRENT_ENV')) {
+    if ('local' === getenv('ENV_CURRENT_ENV')) {
         $theme_stylesheet_path = get_template_directory_uri() . '/dist/css/styles.css';
         $theme_javascript_path = get_template_directory_uri() . '/dist/js/scripts.js';
     }

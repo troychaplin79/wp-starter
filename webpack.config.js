@@ -1,6 +1,6 @@
 /**
  * WordPress Webpack Config
  */
-module.exports = env => {
+module.exports = (env) => {
     return require(`./webpack.${env}.js`);
 };

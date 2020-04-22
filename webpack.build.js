@@ -7,17 +7,16 @@ require("dotenv").config();
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const copyWebpackPlugin = require("copy-webpack-plugin");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const FileManagerPlugin = require("filemanager-webpack-plugin");
 
 module.exports = {
-    entry: [
-        "./src/js/index.js",
-        "./src/scss/styles.scss",
-        "./src/admin/scss/admin.scss",
-        "./src/admin/scss/editor.scss",
-    ],
+    entry: {
+        scripts: "./src/js/index.js",
+        localize: "./src/js/localize.js",
+        admin: "./src/admin/js/admin.js",
+    },
     output: {
-        filename: "js/scripts.js",
+        filename: "js/[name].js",
         path: path.resolve(__dirname, "dist"),
     },
     module: {
@@ -77,12 +76,62 @@ module.exports = {
             {from: "./src/svg/logos", to: "../dist/svg/logos"},
             {from: "./src/svg/icons", to: "../dist/svg/icons"},
         ]),
+        new FileManagerPlugin({
+            onStart: {
+                delete: ["./release"],
+            },
+            onEnd: {
+                copy: [
+                    {
+                        source: "./*.php",
+                        destination: "./release",
+                    },
+                    {
+                        source: "./screenshot.png",
+                        destination: "./release",
+                    },
+                    {
+                        source: "./acf-json",
+                        destination: "./release/acf-json",
+                    },
+                    {
+                        source: "./blocks",
+                        destination: "./release/blocks",
+                    },
+                    {
+                        source: "./components",
+                        destination: "./release/components",
+                    },
+                    {
+                        source: "./dist",
+                        destination: "./release/dist",
+                    },
+                    {
+                        source: "./functions",
+                        destination: "./release/functions",
+                    },
+                    {
+                        source: "./layouts",
+                        destination: "./release/layouts",
+                    },
+                    {
+                        source: "./templates",
+                        destination: "./release/templates",
+                    },
+                    {
+                        source: "./style.css",
+                        destination: "./release/style.css",
+                    },
+                ],
+            },
+        }),
         new BrowserSyncPlugin({
             host: "localhost",
             port: 3000,
             proxy: process.env.LOCAL_URL,
             files: [
                 "*.php",
+                "_examples/*",
                 "acf-json/*",
                 "blocks/**/*",
                 "components/**/*",
@@ -98,13 +147,4 @@ module.exports = {
             notify: false,
         }),
     ],
-    optimization: {
-        minimizer: [
-            new UglifyJsPlugin({
-                cache: true,
-                parallel: true,
-                sourceMap: true,
-            }),
-        ],
-    },
 };

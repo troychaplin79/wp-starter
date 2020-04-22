@@ -1,3 +1,10 @@
+// Import SCSS files
+// -------------------------
+
+import "../scss/styles.scss";
+import "../admin/scss/editor.scss";
+import "../admin/scss/admin.scss";
+
 //
 // ES6 support via polyfills
 // -------------------------
@@ -11,7 +18,7 @@
 // window.$ = window.jQuery = require('jquery');
 
 // Check for jQuery
-window.onload = function() {
+window.onload = function () {
     if (window.jQuery) {
         console.log("jQuery is ready to go");
     } else {
@@ -23,4 +30,4 @@ window.onload = function() {
 // Testing that things are working
 // -------------------------
 
-console.log("welcome to webpack");
+// console.log("welcome to webpack");

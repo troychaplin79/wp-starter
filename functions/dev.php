@@ -3,8 +3,7 @@ function get_page_info()
 {
     global $current_id, $get_post_type, $template_name, $current_tax_name, $current_term_slug;
 
-    $meta = '<main>';
-    $meta .= '<div class="u-block">';
+    $meta = '<div class="u-block u-block--white"><div>';
 
     // Theme meta
     $get_current_theme     = wp_get_theme();
@@ -25,10 +24,14 @@ function get_page_info()
     if (is_home() || is_page() || is_singular()) {
         $meta .= '<li>Current ID: ' . $current_id . '</li>';
         $meta .= '<li>Active post type: ' . $get_post_type . '</li>';
+    }
+
+    if (is_home() || is_page()) {
         $meta .= '<li>Core file loaded: ' . $current_theme_dir . '/page.php</li>';
     }
 
-    if (is_singular() && ! is_page()) {
+    if (is_singular() && !is_page()) {
+        $meta .= '<li>Core file loaded: ' . $current_theme_dir . '/single.php</li>';
         $meta .= '<li>Included template: ' . $current_theme_dir . '/templates/single/' . $template_name . '.php</li>';
     }
 
@@ -43,8 +46,7 @@ function get_page_info()
     }
 
     $meta .= '</ul>';
-    $meta .= '</div>';
-    $meta .= '</main>';
+    $meta .= '</div></div>';
 
     echo $meta;
 }
