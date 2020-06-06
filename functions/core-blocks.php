@@ -49,8 +49,8 @@ function set_allowed_core_blocks($final_blocks, $post)
     
     if (current_user_can('administrator')) {
         $admin_blocks = array(
-            'core/html',
-            'core/shortcode',
+            // 'core/html',
+            // 'core/shortcode',
         );
     }
     
