@@ -2,8 +2,7 @@
 // -------------------------
 
 import "../scss/styles.scss";
-import "../admin/scss/editor.scss";
-import "../admin/scss/admin.scss";
+import "../scss/editor.scss";
 
 //
 // ES6 support via polyfills

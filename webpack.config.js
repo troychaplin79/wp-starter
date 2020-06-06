@@ -13,7 +13,6 @@ module.exports = {
     entry: {
         scripts: "./src/js/index.js",
         localize: "./src/js/localize.js",
-        admin: "./src/admin/js/admin.js",
     },
     output: {
         filename: "js/[name].js",
