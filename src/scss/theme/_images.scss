@@ -10,15 +10,15 @@
     margin-bottom: 25px;
 
     img {
-        background-color: $grey-lighter;
+        background-color: $grey-lightest;
         max-width: #{map-get($breakpoints, s)};
-        width: 100%;
+        margin-bottom: 0 !important;
     }
 }
 
 .wp-block-image img,
 .wp-block-image .aligncenter {
-    margin: 0 auto 0 0;
+    margin: 0 auto;
 }
 
 .wp-block-image .alignleft {
@@ -42,12 +42,13 @@ figure.wp-block-image {
 .wp-block-image figcaption {
     caption-side: bottom;
     display: table-caption;
-    font-family: $font-body;
     font-style: italic;
     font-size: $pixel14;
+    color: $grey-darkest;
     line-height: 1.5;
-    background-color: $grey-lighter;
+    background-color: $grey-lightest;
     padding: 20px 25px;
+    margin-top: 0;
 
     @include media(">s") {
         font-size: 15px;

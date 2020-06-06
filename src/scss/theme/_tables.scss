@@ -3,27 +3,17 @@
  * =============
  */
 
-// Main Table Styles
-// -----------------------------
-
-// Tables
-// -----------------------------
-
 table {
     width: 100%;
-    display: block; // used to force responsive
-    max-width: min-content; // used to force responsive
-    overflow-x: auto; // used to force responsive
     font-size: $pixel16;
-
-    @include media(">s") {
-        font-size: $pixel18;
-    }
-
-    margin-bottom: $spacing-25;
-    // border-collapse: collapse;
-    // border-spacing: 0;
+    color: $black;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border-spacing: 0;
     // white-space: nowrap;
+    vertical-align: top;
+    display: block; // used to force responsive
+    overflow-x: auto; // used to force responsive
 
     h2,
     h3,
@@ -34,37 +24,70 @@ table {
     ul,
     ol {
         font-size: $pixel16;
+        border: none !important;
+        margin-top: 0;
 
-        @include media(">s") {
-            font-size: $pixel18;
+        &:not(:last-child) {
+            margin-bottom: 5px;
         }
     }
+
+    ul,
+    ol {
+        margin-left: $pixel16;
+    }
 }
 
-// No header row, use borders
-// table tr {
-// 	border-bottom: 1px solid $green-light;
-
-// 	&:first-of-type {
-// 		border-top: 1px solid $green-light;
-// 	}
-// }
-
-// Force header styling
 table tr {
-    &:not(:first-of-type) {
-        border-bottom: 1px solid;
-        border-color: rgba($black, 0.15);
-    }
+    border-top: 1px solid $grey;
+    background-color: white;
+}
 
-    &:first-of-type {
-        font-weight: 600;
-        color: white;
-        background-color: rgba($black, 0.6);
+table tr:nth-child(2n) {
+    background-color: #fbfbfb;
+}
+
+table tr th {
+    font-weight: 700;
+    border: 1px solid $grey;
+    text-align: left;
+    margin: 0;
+    min-width: 180px;
+}
+
+table tr td {
+    border: 1px solid $grey;
+    text-align: left;
+    margin: 0;
+}
+
+table thead tr th,
+table tr td {
+    padding: 15px;
+    vertical-align: top;
+
+    @include media(">s") {
+        padding: 20px;
     }
 }
 
-table thead tr td,
-table tr td {
-    padding: $spacing-25;
+table thead tr th {
+    background-color: $grey-darkest;
+    color: white;
+}
+
+table tfoot tr td {
+    background-color: $grey-lightest;
+    color: black;
+}
+
+table + figcaption {
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+td,
+th {
+    padding: 0;
+    text-align: left;
 }
