@@ -1,35 +1,14 @@
 //
+// Dependencies
+// -------------------------
+
+@import "~include-media/dist/_include-media.scss";
+
+//
 // Core
 // -------------------------
 
-@import "_base/core/include-media";
-@import "_base/core/vars";
-@import "_base/core/minicss";
-@import "_base/core/typography";
-
-//
-// Utils
-// -------------------------
-
-@import "_base/utils/block";
-@import "_base/utils/grid";
-@import "_base/utils/utils";
-
-//
-// Layouts
-// -------------------------
-
-@import "_base/layouts/main";
-// @import "_base/layouts/multicol";
-
-//
-// From Theme
-// -------------------------
-
-@import "_base/theme/wp-core";
-@import "_base/theme/images";
-@import "_base/theme/tables";
-@import "_base/theme/comments";
+@import "_base/base";
 
 // Blocks
 // -------------------------
