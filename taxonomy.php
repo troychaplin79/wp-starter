@@ -1,10 +1,6 @@
-<?php // @codingStandardsIgnoreLine
+<?php
 /**
  * WordPress Taxonomy Template
- *
- * @category Core Template
- *
- * @version 1.0
  *
  * @see https://codex.wordpress.org/Post_Type_Templates
  */
@@ -26,8 +22,3 @@ require_once get_template_directory() . '/header.php';
 require_once get_template_directory() . '/blocks/banner/' . $current_tax_name . '.php';
 require_once get_template_directory() . '/templates/taxonomy/' . $current_tax_name . '.php';
 require_once get_template_directory() . '/footer.php';
-
-// Load page information in dev
-if ('DEV' === getenv('ENV_SERVER_ENV')) {
-    get_page_info();
-}

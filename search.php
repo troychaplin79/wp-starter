@@ -1,10 +1,6 @@
-<?php // @codingStandardsIgnoreLine
+<?php
 /**
  * WordPress Search Template
- *
- * @category Core Template
- *
- * @version 1.0
  *
  * @see https://codex.wordpress.org/Creating_a_Search_Page
  */

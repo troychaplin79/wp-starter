@@ -2,10 +2,6 @@
 /**
  * WordPress Single Post Template
  *
- * @category Core Template
- *
- * @version 1.0
- *
  * @see https://codex.wordpress.org/Theme_Development#Single_Post_.28single.php.29
  */
 
@@ -19,10 +15,10 @@ if (have_posts()) :
         $clean_post_type = str_replace('prefix-', '', $get_post_type);
         $template_name   = sanitize_title($clean_post_type);
 
-        require_once get_template_directory() . '/header.php';
-        require_once get_template_directory() . '/blocks/banner/' . $template_name . '.php';
-        require_once get_template_directory() . '/templates/single/' . $template_name . '.php';
-        require_once get_template_directory() . '/footer.php';
+        include_once get_template_directory() . '/header.php';
+        include_once get_template_directory() . '/blocks/banner/' . $template_name . '.php';
+        include_once get_template_directory() . '/templates/single/' . $template_name . '.php';
+        include_once get_template_directory() . '/footer.php';
     endwhile;
 endif;
 

@@ -1,8 +1,13 @@
 <!doctype html>
-<html class="no-js" <?php language_attributes(); ?>>
+<html class="no-js" <?php language_attributes(); // @codingStandardsIgnoreLine?>>
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
+
+    <?php
+        // TODO review viewport content
+        // TODO look at simplification of favicons
+    ?>
 
     <link rel="dns-prefetch" href="//ajax.googleapis.com" />
     <link rel="dns-prefetch" href="//google-analytics.com" />

@@ -1,10 +1,6 @@
-<?php // @codingStandardsIgnoreLine
+<?php
 /**
  * WordPress Page Template
- *
- * @category Core Template
- *
- * @version 1.0
  *
  * @see https://developer.wordpress.org/themes/template-files-section/page-template-files/
  */
@@ -19,15 +15,15 @@ if (have_posts()) :
         $clean_post_type = str_replace('prefix-', '', $get_post_type);
         $template_name   = sanitize_title($clean_post_type);
 
-        require_once get_template_directory() . '/header.php';
-        require_once get_template_directory() . '/blocks/banner/' . $template_name . '.php';
+        include_once get_template_directory() . '/header.php';
+        include_once get_template_directory() . '/blocks/banner/' . $template_name . '.php';
 
         echo '<main>';
             echo '<h1>' . get_the_title() . '</h1>';
             the_content();
         echo '</main>';
 
-        require_once get_template_directory() . '/footer.php';
+        include_once get_template_directory() . '/footer.php';
     endwhile;
 endif;
 

@@ -1,10 +1,6 @@
-<?php // @codingStandardsIgnoreLine
+<?php
 /**
  * WordPress 404 Template
- *
- * @category Core Template
- *
- * @version 1.0
  *
  * @see https://codex.wordpress.org/Creating_an_Error_404_Page
  */
