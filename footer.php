@@ -8,7 +8,7 @@ if ('local' === getenv('ENV_CURRENT_ENV')) {
     include_once get_template_directory() . '/_examples/grid.php';
     echo '</main>';
 
-    get_page_info();
+    getPageInfo();
 }
 ?>
 

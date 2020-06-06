@@ -1,5 +1,5 @@
-<?php // @codingStandardsIgnoreLine
-function get_page_info()
+<?php
+function getPageInfo()
 {
     global $current_id, $get_post_type, $template_name, $current_tax_name, $current_term_slug;
 
