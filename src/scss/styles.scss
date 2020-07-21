@@ -1,19 +1,32 @@
+/**
+ * Front End Styles
+ */
+
 //
 // Dependencies
 // -------------------------
 
+@import "~minireset.css/minireset.sass";
 @import "~include-media/dist/_include-media.scss";
 
 //
 // Core
 // -------------------------
 
-@import "_base/base";
+@import "core/vars";
+@import "core/block";
+@import "core/grid";
+@import "core/main";
+@import "core/layouts";
+@import "core/content";
+@import "core/wordpress";
+@import "core/utils";
 
 // Blocks
 // -------------------------
 
-// @import '../../blocks/path_to_file';
+// @import "../../blocks/navigation/navigation";
+// @import "../../blocks/header/header";
 
 // Components
 // -------------------------
