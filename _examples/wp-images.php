@@ -150,7 +150,3 @@
 </div>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet arcu est. Fusce id nulla tellus. In id semper nibh, eu viverra quam. Cras nec vulputate dui, tristique mollis neque. Sed gravida vulputate mi et tincidunt. Fusce eget mauris eget libero pellentesque convallis. Cras et rhoncus massa, et tempus turpis. Donec bibendum urna sit amet purus tristique consequat. Nunc egestas viverra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget vehicula orci. Donec tellus erat, vulputate id nibh ac, pellentesque interdum mauris. Praesent eu neque id ex euismod pretium a nec ligula. Aenean laoreet arcu libero, quis semper lacus euismod ac. Morbi pulvinar magna nec erat iaculis, id iaculis dolor ultrices. Etiam non euismod urna, et maximus ex.</p>
-<p>Praesent ultricies arcu pharetra dictum feugiat. Aliquam congue interdum ligula id efficitur. Integer sagittis tincidunt nisi, et finibus tortor fringilla sit amet. Aliquam sollicitudin sem sed quam efficitur vestibulum. Quisque faucibus varius quam, in iaculis erat pharetra ac. Sed lacinia nunc in fermentum dignissim. Donec gravida pretium nisi vitae ultrices. Phasellus molestie eget magna ac consequat. Pellentesque pretium id dolor quis sollicitudin. Integer auctor volutpat dolor non mattis.</p>
-
-<div class="u-block u-block--grey">
-</div>

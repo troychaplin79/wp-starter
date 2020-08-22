@@ -3,19 +3,19 @@
 /**
  * Add custom block categories
  */
-function acfBlockCategories($categories, $post)
-{
-    return array_merge(
-        $categories,
-        array(
-            array(
-                'slug'  => 'content-blocks',
-                'title' => __('Content Blocks', 'content-blocks'),
-            ),
-        )
-    );
-}
-add_filter('block_categories', 'acfBlockCategories', 10, 2);
+// function acfBlockCategories($categories, $post)
+// {
+//     return array_merge(
+//         $categories,
+//         array(
+//             array(
+//                 'slug'  => 'content-blocks',
+//                 'title' => __('Content Blocks', 'content-blocks'),
+//             ),
+//         )
+//     );
+// }
+// add_filter('block_categories', 'acfBlockCategories', 10, 2);
 
 /**
  * Register the Blocks

@@ -55,7 +55,7 @@ function acfAllowedBlockTypes($allowed_blocks, $post)
 
     // Register plugin specific blocks
     $plugin_blocks = array(
-        'gravityforms/form',
+        // 'gravityforms/form',
     );
 
     $allowed_blocks = array_merge($core_blocks, $custom_blocks, $admin_blocks, $plugin_blocks);

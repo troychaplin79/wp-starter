@@ -38,5 +38,5 @@ function wpstarterMenuOrder()
         // 'edit.php?post_type=custom_post_type_2',
     );
 }
-// add_filter('custom_menu_order', '__return_true');
-// add_filter('menu_order', 'wpstarterMenuOrder');
+add_filter('custom_menu_order', '__return_true');
+add_filter('menu_order', 'wpstarterMenuOrder');
