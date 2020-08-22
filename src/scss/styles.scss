@@ -8,19 +8,27 @@
 
 @import "~minireset.css/minireset.sass";
 @import "~include-media/dist/_include-media.scss";
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+//
+// Vars
+// -------------------------
+
+@import "~tc-framework/src/scss/core/vars";
+@import "theme/vars";
 
 //
 // Core
 // -------------------------
 
-@import "core/vars";
-@import "core/block";
-@import "core/grid";
-@import "core/main";
-@import "core/layouts";
-@import "core/content";
-@import "core/wordpress";
-@import "core/utils";
+@import "~tc-framework/src/scss/core/block";
+@import "~tc-framework/src/scss/core/grid";
+@import "~tc-framework/src/scss/core/main";
+@import "~tc-framework/src/scss/core/layouts";
+@import "~tc-framework/src/scss/core/content";
+@import "~tc-framework/src/scss/core/asides";
+@import "~tc-framework/src/scss/core/wordpress";
+@import "~tc-framework/src/scss/core/utils";
 
 // Blocks
 // -------------------------
